@@ -14,11 +14,11 @@ This journal documents my weekly journey into cybersecurity, tools, networking, 
    - Careers in Cyber
 - 📝 Wrote in journal:
    - Why I want to learn cybersecurity
+   I wanna learn cyber security becuase it amuses me. I don't know why but i find hacking intresting af.
    - 3 things I learned today:
      - Cybersecurity = protection of digital assets
      - Threats = malware, phishing, DoS, etc.
      - Cyber careers are diverse: analyst, engineer, hacker
-
 ---
 
 ## ⏭️ To-Do:
