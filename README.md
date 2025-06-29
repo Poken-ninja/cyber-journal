@@ -187,7 +187,157 @@ Why it works:
 - You'll see these attacks often in real-world scenarios — stay alert
 
 ---
+DAY -3
+Term:
+Watering hole attack
 
+Definition
+An attack in which a threat actor compromises a website frequently visited by a specific group of users
+
+Example of: Social engineering
+----
+Physical social engineering
+
+Definition
+An attack in which a threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location
+
+Example of: Social engineering
+----
+Term:
+USB baiting
+
+Definition
+An attack in which a threat actor strategically leaves a malware USB stick for an employee to find and unknowingly infect a network
+
+Example of: Social engineering
+----
+ASSIGNMENT:
+A computer virus is malicious code that interferes with computer operations and causes damage. A virus is a type of malware.
+The Morris worm helped shape the security industry because it led to the development of computer emergency response teams, now commonly referred to as computer security incident response teams (CSIRTs). 
+The key impacts of the Equifax breach were the fact that millions of customers' PII was stolen and that the significant financial consequences of a breach became more apparent. 
+The key impacts of the Equifax breach were the fact that millions of customers' PII was stolen and that the significant financial consequences of a breach became more apparent. 
+Social engineering, such as phishing, is a manipulation technique that relies on human error (not computer error) to gain private information, access, or valuables. 
+----
+![image](https://github.com/user-attachments/assets/01fcb42c-eae3-451c-8f4b-bffb8873925b)
+
+VERY VERY VERY IMPORTANT AND HARD
+****8 CISSP(Certified Information System Security Professional) Security Domains****
+| #  | Domain Name                                   | Focus Area                                                                 |
+|----|-----------------------------------------------|----------------------------------------------------------------------------|
+| 1️⃣ | Security and Risk Management                 | Policies, ethics, CIA triad, risk analysis, compliance                     |
+| 2️⃣ | Asset Security                               | Classify, label, and secure organizational data and assets                 |
+| 3️⃣ | Security Architecture and Engineering        | Secure systems design, cryptography, physical security                     |
+| 4️⃣ | Communication and Network Security           | Network protocols, firewalls, VPNs, segmentation, wireless security        |
+| 5️⃣ | Identity and Access Management (IAM)         | Access control, authentication, authorization, identity lifecycle          |
+| 6️⃣ | Security Assessment and Testing              | Audits, vulnerability scans, pentesting, log review                        |
+| 7️⃣ | Security Operations                          | Monitoring, incident response, forensics, disaster recovery                |
+| 8️⃣ | Software Development Security                | Secure coding practices, DevSecOps, OWASP Top 10, SDLC                     |
+
+
+## 🔐 Common Attack Types & CISSP Domains
+
+| Attack Type                  | Description                                                                 | Mapped CISSP Domain(s)                             |
+|-----------------------------|-----------------------------------------------------------------------------|----------------------------------------------------|
+| **Password Attack**         | Attacking password-secured systems (e.g., brute force, rainbow table)       | Communication and Network Security                 |
+| **Social Engineering**      | Exploiting human error (e.g., phishing, vishing, smishing, USB baiting)     | Security and Risk Management                       |
+| **Physical Attack**         | Hardware-based attacks (e.g., malicious USB cable, skimming)                | Asset Security                                     |
+| **Adversarial AI**          | Manipulating AI/ML to exploit security systems                              | Comm & Network Security + Identity & Access Mgmt   |
+| **Supply Chain Attack**     | Targeting third-party vendors or software/hardware supply chains            | Risk Mgmt, Security Architecture, Security Ops     |
+| **Cryptographic Attack**    | Breaking encryption (e.g., birthday attack, downgrade, collision)           | Communication and Network Security                 |
+
+**Password attack**
+A password attack is an attempt to access password-secured devices, systems, networks, or data. Some forms of password attacks that you’ll learn about later in the certificate program are:  
+
+1.Brute force
+2.Rainbow table
+
+Password attacks fall under the communication and network security domain. 
+
+**Social engineering attack**
+Social engineering is a manipulation technique that exploits human error to gain private information, access, or valuables. Some forms of social engineering attacks that you will continue to learn about throughout the program are: 
+
+1. Phishing
+2. Smishing
+3. Vishing
+4. Spear phishing
+5. Whaling
+6. Social media phishing
+7. Business Email Compromise (BEC)
+8. Watering hole attack
+9. USB (Universal Serial Bus) baiting
+10. Physical social engineering 
+
+Social engineering attacks are related to the security and risk management domain.
+
+**Physical attack**
+A physical attack is a security incident that affects not only digital but also physical environments where the incident is deployed. Some forms of physical attacks are:
+
+1. Malicious USB cable
+2. Malicious flash drive
+3. Card cloning and skimming
+
+Physical attacks fall under the asset security domain. 
+
+**Adversarial artificial intelligence**
+Adversarial artificial intelligence is a technique that manipulates artificial intelligence and machine learning technology to conduct attacks more efficiently. Adversarial artificial intelligence falls under both the communication and network security and the identity and access management domains.
+
+**Supply-chain attack**
+A supply-chain attack targets systems, applications, hardware, and/or software to locate a vulnerability where malware can be deployed. Because every item sold undergoes a process that involves third parties, this means that the security breach can occur at any point in the supply chain. These attacks are costly because they can affect multiple organizations and the individuals who work for them. Supply-chain attacks can fall under several domains, including but not limited to the security and risk management, security architecture and engineering, and security operations domains.
+
+**Cryptographic attack**
+A cryptographic attack affects secure forms of communication between a sender and intended recipient. Some forms of cryptographic attacks are: 
+
+1. Birthday
+2. Collision
+3. Downgrade
+4. 
+Cryptographic attacks fall under the communication and network security domain. 
+
+## ✅ Key Takeaways
+
+- The 8 CISSP domains help categorize job roles and risks in cybersecurity.
+- Different types of attacks map to specific domains — this helps in detection and response planning.
+- Social engineering is one of the most dangerous categories, affecting both digital and physical security.
+- Supply chain attacks are hard to detect and can affect multiple organizations at once.
+- Understanding the domain-to-attack mapping helps security analysts respond more effectively.
+
+📖 For deeper definitions, explore the [NIST Glossary](https://csrc.nist.gov/glossary) or search terms like "birthday attack site:.edu"
+-----
+## 🚨 Understanding Threat Actors & Hackers
+
+### 🔐 What is a Threat Actor?
+A **threat actor** is any person or group that poses a security risk by intending to cause harm to systems, networks, or data.
+
+---
+
+### 🔥 Threat Actor Types
+
+| Threat Actor Type             | Description                                                                 | Motivation / Intentions                                     |
+|------------------------------|-----------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Advanced Persistent Threats (APTs)** | Skilled, stealthy attackers who access networks undetected | Espionage, critical infrastructure damage, IP theft         |
+| **Insider Threats**          | People with authorized access who misuse it                                | Sabotage, corruption, data leaks                            |
+| **Hacktivists**              | Politically or socially motivated attackers                                 | Protests, social change, propaganda, fame                   |
+
+---
+
+### 💻 Hacker Types
+
+| Hacker Type          | Description                                                     | Motivation / Legality               |
+|----------------------|-----------------------------------------------------------------|-------------------------------------|
+| **Authorized Hackers** | Also called ethical hackers. Follow the law & protect systems. | Ethical – Security testing, defense |
+| **Semi-Authorized Hackers** | Vulnerability researchers who don’t exploit flaws             | Borderline – Usually non-malicious  |
+| **Unauthorized Hackers** | Malicious actors who break the law to steal/sell data         | Unethical – Money, revenge, damage  |
+| **Script Kiddies**      | Unskilled attackers using pre-made tools or malware            | Learn, revenge, low-skill attacks   |
+| **Contract Hackers**    | Paid hackers (legal or illegal) for specific jobs              | Depends on job – Both ethical/unethical |
+| **Vigilante Hackers**   | Self-proclaimed digital defenders fighting cybercrime         | Ethical intent, questionable methods |
+
+---
+
+### ✅ Key Takeaways
+
+- **Threat actors** are defined by **intent** to cause harm.
+- **Hackers** are defined by **technical skill** and how they choose to use it.
+- Knowing their **goals and motivations** helps cybersecurity teams better prepare and defend against attacks.
 
 
 ## ⏭️ To-Do:
