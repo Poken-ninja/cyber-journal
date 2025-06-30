@@ -4,6 +4,7 @@ Weekly cybersecurity learning journal
 This journal documents my weekly journey into cybersecurity, tools, networking, and cloud security.
 
 ---
+You may be asked in an interview if you know about security frameworks and principles. Or you may be asked to explain how they're used to secure organizational assets.
 
 ## 📅 Week 1 (June 27 – July 3)
 MUST HAVE TECHNICAL SKILLS : SIEM
@@ -338,6 +339,100 @@ A **threat actor** is any person or group that poses a security risk by intendin
 - **Threat actors** are defined by **intent** to cause harm.
 - **Hackers** are defined by **technical skill** and how they choose to use it.
 - Knowing their **goals and motivations** helps cybersecurity teams better prepare and defend against attacks.
+
+## 📘 Glossary – Course 1, Module 2 (Cybersecurity)
+
+| Term                         | Definition                                                                 |
+|------------------------------|----------------------------------------------------------------------------|
+| **Adversarial AI**           | Technique that manipulates AI/ML to conduct attacks more efficiently       |
+| **Business Email Compromise (BEC)** | A phishing attack where a threat actor impersonates a trusted source for financial gain |
+| **CISSP**                    | Certified Information Systems Security Professional – top-tier security cert |
+| **Computer Virus**           | Malicious code that disrupts computer operations and damages data/software |
+| **Cryptographic Attack**     | Attack targeting encrypted communications between sender and receiver      |
+| **Hacker**                   | Any person using computers to access systems, networks, or data            |
+| **Malware**                  | Software specifically designed to harm devices or networks                 |
+| **Password Attack**          | Attempt to break into password-secured systems or data                     |
+| **Phishing**                 | Digital trickery used to steal sensitive info or deploy malware            |
+| **Physical Attack**          | A digital + physical security breach (e.g., hardware-based attack)         |
+| **Physical Social Engineering** | Impersonation in real life to gain unauthorized physical access         |
+| **Social Engineering**       | Manipulation exploiting human error for access or info                     |
+| **Social Media Phishing**    | Using social media research to craft targeted phishing attacks             |
+| **Spear Phishing**           | Highly targeted phishing emails that appear trustworthy                    |
+| **Supply-Chain Attack**      | Attack that targets vendors/hardware/software to inject malware            |
+| **USB Baiting**              | Dropping malicious USBs in hopes victims plug them in                      |
+| **Virus**                    | See “Computer Virus”                                                       |
+| **Vishing**                  | Voice phishing – tricking users via calls or voice messages                |
+| **Watering Hole Attack**     | Hacking a website frequently used by the target group                      |
+
+-----
+## 🛡️ Controls, Frameworks, and Compliance
+
+### 🔁 What is a Security Lifecycle?
+A **security lifecycle** is a continuously evolving set of security policies and standards designed to protect systems. It includes:
+
+- Risk identification
+- Control implementation
+- Monitoring
+- Review & improvement
+
+---
+
+### 🔐 CIA Triad & Security Controls
+
+| Component        | Meaning                                          |
+|------------------|--------------------------------------------------|
+| **Confidentiality** | Keep data private and secure                    |
+| **Integrity**       | Ensure data is accurate and unaltered           |
+| **Availability**    | Ensure systems are accessible when needed       |
+
+These principles guide the development of **security controls** — safeguards to mitigate specific risks and vulnerabilities.
+
+---
+
+### 🧱 What are Frameworks?
+
+Security frameworks are **guidelines or blueprints** used to:
+
+1. Define security goals
+2. Set implementation rules
+3. Apply controls
+4. Monitor and communicate results
+
+Frameworks + Controls → ensure organizations **achieve compliance**.
+
+---
+
+### 📜 Key Compliance Standards & Frameworks
+
+| Name / Acronym                | Purpose & Relevance                                                                            |
+|-------------------------------|-----------------------------------------------------------------------------------------------|
+| **NIST CSF / RMF**            | U.S. standards to manage risk (voluntary but widely used)                                     |
+| **FERC-NERC**                 | Power grid security & reporting (USA/North America)                                           |
+| **FedRAMP®**                  | Standardizes cloud security for U.S. government services                                      |
+| **CIS Controls**              | Actionable guidelines for securing systems/networks                                           |
+| **GDPR**                      | EU regulation that governs the use & protection of citizen data                              |
+| **PCI DSS**                   | International standard for secure handling of credit card data                               |
+| **HIPAA**                     | U.S. law to protect patient health info (PHI)                                                 |
+| **HITRUST®**                  | Framework that helps meet HIPAA compliance                                                    |
+| **ISO Standards**             | International standards for process, security, and management                                |
+| **SOC 1 / SOC 2**             | Audit reports for assessing internal controls (developed by AICPA)                           |
+
+---
+
+### 📌 Extra Recommendations
+
+- Keep updated with **revised regulations**
+- Research: **Gramm-Leach-Bliley Act (GLBA)**, **Sarbanes-Oxley Act (SOX)**
+
+---
+
+### ✅ Key Takeaways
+
+- **Controls** reduce risk
+- **Frameworks** provide structure
+- **Compliance** ensures legal alignment
+- These three components work **together** to keep organizations secure and accountable.
+
 
 
 ## ⏭️ To-Do:
