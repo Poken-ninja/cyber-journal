@@ -458,8 +458,202 @@ Protecting and preserving evidence: The process of properly working with fragile
 Security information and event management (SIEM): An application that collects and analyzes log data to monitor critical activities in an organization
 
 SQL (Structured Query Language): A query language used to create, interact with, and request information from a database
+-------------
 
 
+
+## 🔐 CISSP 8 Security Domains – What Cybersecurity Analysts Need to Know
+
+As a cybersecurity analyst, it’s essential to understand the different security domains that define and organize cybersecurity work. These eight domains are defined by the **CISSP (Certified Information Systems Security Professional)** framework and align with real-world tasks and responsibilities.
+
+---
+
+### 1️⃣ Security and Risk Management
+
+Focuses on defining an organization’s **security posture**, which includes:
+
+* 🎯 Security goals and objectives
+* ⚖️ Risk mitigation processes & compliance
+* 🔁 Business continuity planning
+* 📜 Legal regulations & ethics
+* 🔐 InfoSec processes: incident response, vulnerability management, cloud security, etc.
+
+**Example:** Modifying how PII is handled to comply with GDPR.
+
+---
+
+### 2️⃣ Asset Security
+
+Covers **data handling and protection** across its lifecycle:
+
+* 🗂️ Data storage, maintenance, retention, destruction
+* 📊 Asset tracking and classification
+* 🧾 Backups and recovery plans
+
+**Example:** Creating automated backups of critical files to minimize risk from ransomware.
+
+---
+
+### 3️⃣ Security Architecture and Engineering
+
+Focuses on the **secure design** of systems and tools. Core principles include:
+
+* 🔄 Shared responsibility model
+* 🧱 Defense in depth
+* 🔐 Least privilege & Zero trust
+* 🚪 Fail securely, trust but verify, separation of duties
+
+**Example:** Using a SIEM to detect abnormal login activity.
+
+---
+
+### 4️⃣ Communication and Network Security
+
+Securing **network infrastructure** and **data-in-transit**:
+
+* 🌐 Secure remote access
+* 🔒 On-site & cloud network protections
+* 🛡️ Network segmentation, VPNs, and firewalls
+
+**Example:** Restricting remote access to internal servers via VPN.
+
+---
+
+### 5️⃣ Identity and Access Management (IAM)
+
+Ensures **only authorized users** can access systems:
+
+* 🧑‍💼 User identity validation & authentication
+* 🔑 Access control based on roles
+* 🔐 Principle of Least Privilege (PoLP)
+
+**Example:** Customer service agents only see customer data *during* case resolution.
+
+---
+
+### 6️⃣ Security Assessment and Testing
+
+Ensures systems are **continuously tested and hardened**:
+
+* 🧪 Penetration testing (Ethical hacking)
+* ✅ Security control audits
+* 📈 Data collection and analysis
+
+**Example:** Auditing employee access rights to identify privilege misuses.
+
+---
+
+### 7️⃣ Security Operations
+
+Focuses on **responding to and managing security incidents**:
+
+* 🧠 Security awareness training
+* 📚 Incident response playbooks
+* 🔍 Intrusion detection & prevention (IDS/IPS)
+* 🧾 Log management and forensics
+
+**Example:** Investigating large off-hours data access using SIEM logs.
+
+---
+
+### 8️⃣ Software Development Security
+
+Integrating **security into the software development lifecycle**:
+
+* 💻 Secure coding practices
+* 🧪 Application security testing
+* 🧬 Encryption validation in software releases
+* ✅ QA and pen-testing during development
+
+**Example:** Ensuring patient data in a healthcare app is encrypted before release.
+
+---
+
+### 📌 TL;DR for Teammates
+
+| Domain                | Keyword                        |
+| --------------------- | ------------------------------ |
+| Security & Risk Mgmt  | Policies, ethics, compliance   |
+| Asset Security        | Data lifecycle & backups       |
+| Security Architecture | Design, Zero Trust, principles |
+| Network Security      | VPNs, firewalls, secure comms  |
+| IAM                   | Roles, access, least privilege |
+| Security Testing      | Pen testing, audits            |
+| Security Operations   | Detection, response, forensics |
+| DevSec                | Secure coding, app testing     |
+
+---
+![image](https://github.com/user-attachments/assets/d7f520b6-70d7-431c-af7e-1532c55f0c92)
+
+-----
+🛡️ Managing Common Threats, Risks & Vulnerabilities
+As cybersecurity professionals, one of our main responsibilities is protecting both digital and physical assets from threats, risks, and vulnerabilities. Understanding the modern threat landscape is critical for creating strong security policies and response strategies.
+
+🎯 Risk Management
+An asset is anything of value to an organization, such as:
+
+🔐 Digital assets: SSNs, DOBs, bank details, personal info
+
+🖥️ Physical assets: Servers, kiosks, desktop computers
+
+Common Risk Management Strategies:
+Strategy	Description
+Acceptance	Accept the risk to maintain business continuity
+Avoidance	Avoid activities that introduce the risk
+Transference	Transfer risk to a third party (e.g., insurance, vendor)
+Mitigation	Reduce the impact/likelihood of the risk
+
+🧰 Frameworks often used:
+
+NIST RMF (Risk Management Framework)
+
+HITRUST (Health Information Trust Alliance)
+
+🚨 Threats
+A threat is any event or actor that can negatively impact assets.
+
+Threat Type	Description
+Insider Threats	Authorized personnel misusing access
+Advanced Persistent Threats (APT)	Long-term, stealthy system compromise by external actors
+
+⚠️ Risks
+A risk is the potential for loss or damage when a threat exploits a vulnerability.
+
+Risk = Likelihood of Threat x Impact
+
+Risk Type	Examples
+External Risk	Hackers, phishing, malware
+Internal Risk	Disgruntled employees, vendor misuse
+Legacy Systems	Unpatched, outdated systems still connected
+Multiparty Risk	Vendors or third-parties having access to sensitive IP
+Compliance Risks	Outdated software or missing security patches
+
+🛑 Stay updated using:
+
+NIST risk catalogs
+
+OWASP Top 10
+
+🕳️ Vulnerabilities
+A vulnerability is a weakness that could be exploited by a threat actor.
+
+Vulnerability	Description
+ProxyLogon	Remote code execution on Microsoft Exchange servers
+ZeroLogon	Exploits Microsoft Netlogon protocol
+Log4Shell	Remote code execution via Java’s Log4j utility
+PetitPotam	Exploits NTLM for Windows LAN authentication theft
+Security Logging Failure	Poor logging/monitoring lets threats go undetected
+SSRF (Server-Side Request Forgery)	Tricks server into exposing internal resources
+
+👨‍💻 Entry-level security analysts often begin in Vulnerability Management – continuously scanning systems, applying patches, and reducing exposure.
+
+🛠️ Quick Summary
+Category       	Definition	                            Example
+Threat	       Potential harm (event/actor)          	APT, insider misuse
+Risk	          Likelihood of threat impacting asset   	Legacy software vulnerability
+Vulnerability   A flaw that threat actors can exploit 	Log4Shell exploit in Log4j
+
+-----
 
 
 
