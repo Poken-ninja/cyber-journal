@@ -656,6 +656,190 @@ Vulnerability   A flaw that threat actors can exploit 	Log4Shell exploit in Log4
 -----
 
 
+---
+
+## 📚 Cybersecurity Glossary – Module 1 (NIST RMF + Common Threats)
+
+### 🛠 NIST Risk Management Framework (RMF) Terms
+
+| Term           | Definition                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------- |
+| **Prepare**    | The 1st step of the NIST RMF: Activities required to manage security and privacy risks before a breach. |
+| **Categorize** | The 2nd step: Used to identify and organize systems/assets by impact level.                             |
+| **Select**     | The 3rd step: Choose and document the security/privacy controls to be implemented.                      |
+| **Implement**  | The 4th step: Apply selected security and privacy controls.                                             |
+| **Assess**     | The 5th step: Determine if the controls are working effectively.                                        |
+| **Authorize**  | The 6th step: Decision-making process to accept any remaining risk before deploying systems.            |
+| **Monitor**    | The 7th step: Continuously observe and evaluate systems and controls for effectiveness.                 |
+
+---
+
+### 🔐 Core Security Terms
+
+| Term                      | Definition                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Risk**                  | Anything that can impact the **confidentiality**, **integrity**, or **availability** (CIA) of an asset.            |
+| **Risk Mitigation**       | The process of minimizing the impact of a risk (e.g., security breach) through rules, controls, or response plans. |
+| **Security Posture**      | An organization’s overall cybersecurity strength and ability to adapt to evolving threats.                         |
+| **Business Continuity**   | The ability of an organization to keep operations running during/after a disruption or attack.                     |
+| **Shared Responsibility** | Concept where all stakeholders are accountable for maintaining security, not just the IT team.                     |
+
+---
+
+### 🎯 Threats & Vulnerabilities
+
+| Term                   | Definition                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| **External Threat**    | A risk originating **outside** the organization (e.g., hackers, APTs, phishing).  |
+| **Internal Threat**    | A risk originating from a **trusted insider** like employees or vendors.          |
+| **Ransomware**         | A cyberattack that encrypts files and demands payment to restore access.          |
+| **Vulnerability**      | A weakness in systems or software that can be exploited by threat actors.         |
+| **Social Engineering** | Psychological manipulation of people to gain access to sensitive data or systems. |
+
+---
+
+
+## 🛡️ Frameworks & Controls in Cybersecurity
+
+Security **frameworks** and **controls** work together to help organizations **mitigate threats, risks, and vulnerabilities**, while also ensuring **compliance** with laws and standards like HIPAA, GDPR, or ISO.
+
+---
+
+### 🧭 What are Security Frameworks?
+
+> A **framework** is a set of guidelines or best practices that help organizations plan, implement, and manage security.
+
+Frameworks:
+
+* Help align with **laws and regulations**
+* Offer a **strategic approach** to cybersecurity
+* Can be **industry-specific** (e.g., HIPAA for healthcare, NIST for government)
+
+📌 **Example:**
+To comply with **HIPAA**, a healthcare provider might follow a framework that requires using **encryption** and **multi-factor authentication (MFA)** for accessing patient records.
+
+---
+
+### 🛠️ What are Security Controls?
+
+> A **control** is a specific measure taken to reduce security risk. Controls are safeguards that enforce the objectives of a framework.
+
+Controls fall under 3 major categories:
+
+| Type               | Examples                                     | Purpose                        |
+| ------------------ | -------------------------------------------- | ------------------------------ |
+| **Physical**       | Locks, CCTV, access cards, security guards   | Prevent physical intrusions    |
+| **Technical**      | MFA, firewalls, antivirus, encryption        | Prevent/detect digital threats |
+| **Administrative** | Policies, access rules, asset classification | Govern human behavior          |
+
+🎯 **Controls are used to**:
+
+* **Prevent** attacks (e.g., blocking unauthorized access)
+* **Detect** issues (e.g., alerting unusual login)
+* **Correct** problems (e.g., restoring data from backups)
+
+---
+
+## 🌐 Key Cybersecurity Frameworks
+
+### 🔐 NIST Cybersecurity Framework (CSF)
+
+* Developed by the U.S. **National Institute of Standards and Technology**
+* Provides a **risk-based approach** to managing cybersecurity
+* Used widely across sectors including finance, healthcare, and government
+
+### 💥 Cyber Threat Framework (CTF)
+
+* Created by the **U.S. Office of the Director of National Intelligence**
+* Standardizes the language used to describe **cyber threat activity**
+* Helps teams **analyze and share threat data efficiently**
+
+### 🌍 ISO/IEC 27001
+
+* An **internationally recognized** framework
+* Defines requirements for an **Information Security Management System (ISMS)**
+* Helps secure **financial data, IP, employee info**, and more
+* Does **not mandate** specific controls but provides a **catalog** of best practices
+
+---
+
+### 🔄 Frameworks + Controls: Working Together
+
+Frameworks define ***what*** needs to be done.
+Controls define ***how*** to do it.
+
+🧠 **Example:**
+
+* **Framework Goal:** Protect sensitive medical records (HIPAA requirement)
+* **Control Used:** Enable **MFA** for patient portal access
+
+| Framework              | Purpose                              | Example Control                    |
+| ---------------------- | ------------------------------------ | ---------------------------------- |
+| HIPAA                  | Healthcare data protection           | MFA, encryption                    |
+| NIST RMF / CSF         | Risk-based approach to cybersecurity | Firewalls, policies                |
+| ISO/IEC 27001          | ISMS best practices & compliance     | Asset classification, access rules |
+| Cyber Threat Framework | Threat communication standard        | Threat modeling, detection tools   |
+
+---
+
+### ✅ Summary
+
+* Frameworks guide **what needs to be done** to reduce risk.
+* Controls define **specific actions** to implement security.
+* Together, they help build a **robust security posture**.
+---
+
+### 🔐 **CIA Triad – A Core Security Model**
+
+| Aspect         | Description                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------------- |
+| **What it is** | A **foundational security model** representing the three core principles of information security. |
+| **Purpose**    | Guides **what to protect**: ensures information stays **confidential, accurate, and accessible**. |
+| **Stands for** | - **C**onfidentiality – only authorized access                                                    |
+
+* **I**ntegrity – data is correct and unaltered
+* **A**vailability – systems/data are accessible when needed |
+  \| **Used in** | Designing and evaluating the effectiveness of **security policies and systems**. |
+  \| **Think of it as** | The **"what" and "why"** of cybersecurity.
+
+---
+
+### 🧩 **CSF (Cybersecurity Framework) – A Strategic Guideline**
+
+| Aspect             | Description                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| **What it is**     | A **set of guidelines** developed by NIST (National Institute of Standards and Technology). |
+| **Purpose**        | Provides a **structured approach** to **manage and reduce cybersecurity risk**.             |
+| **Core Functions** | - **Identify**                                                                              |
+
+* **Protect**
+* **Detect**
+* **Respond**
+* **Recover** |
+  \| **Used in** | Helping organizations build a **cybersecurity program** or **improve existing practices**. |
+  \| **Think of it as** | The **"how" and "when"** of applying cybersecurity practices across an organization. |
+
+---
+
+### 🧠 In Simple Terms:
+
+| Comparison      | CIA Triad                          | CSF                                   |
+| --------------- | ---------------------------------- | ------------------------------------- |
+| **Focus**       | Core **principles** of security    | **Processes** to manage cybersecurity |
+| **Scope**       | Conceptual and **technical**       | Strategic and **operational**         |
+| **Level**       | **Theoretical foundation**         | **Implementation framework**          |
+| **Who uses it** | Security professionals, developers | Organizations, analysts, managers     |
+
+---
+
+### ✅ Example:
+
+* **CIA Triad** says: "We must keep patient data secure, unmodified, and accessible."
+* **CSF** says: "Here’s the step-by-step plan we’ll follow to make sure that happens."
+
+---
+
+
 
 
 
