@@ -919,6 +919,73 @@ Practice using audit templates and checklists
 
 Try tools like OpenVAS, Nessus, or Nikto for technical audits
 
+---------------------------------------------------------------------
+# Cybersecurity Glossary – Module 2
+
+A quick-reference glossary of key cybersecurity terms from Course 2, Module 2.
+
+---
+
+### 🔹 Asset  
+An item perceived as having value to an organization.
+
+### 🔹 Attack Vectors  
+The pathways attackers use to penetrate security defenses.
+
+### 🔹 Authentication  
+The process of verifying who someone is.
+
+### 🔹 Authorization  
+The concept of granting access to specific resources in a system.
+
+### 🔹 Availability  
+The idea that data is accessible to those who are authorized to access it.
+
+### 🔹 Biometrics  
+The unique physical characteristics that can be used to verify a person’s identity.
+
+### 🔹 Confidentiality  
+Only authorized users can access specific assets or data.
+
+### 🔹 CIA Triad  
+Confidentiality, Integrity, and Availability — a model for managing information security risks.
+
+---
+
+### 🧩 NIST Cybersecurity Framework Core Functions
+
+- **Identify**: Manage cybersecurity risk to systems, people, assets.
+- **Protect**: Policies, training, and tools that reduce threats.
+- **Detect**: Monitor for and identify potential incidents.
+- **Respond**: Contain, neutralize, and analyze incidents.
+- **Recover**: Restore systems and operations after an incident.
+- **Govern**: Align cybersecurity strategy with business goals.
+
+---
+
+### 📘 Frameworks & Organizations
+
+- **NIST CSF**: A voluntary framework for managing cybersecurity risk.
+- **NIST SP 800-53**: Security controls framework for U.S. federal information systems.
+- **OWASP**: Non-profit improving software security practices globally.
+
+---
+
+### 🔐 Security Terms
+
+- **Encryption**: Converting data from readable to encoded format.
+- **Integrity**: Data is correct, authentic, and reliable.
+- **Risk**: Anything that can impact CIA of an asset.
+- **Threat**: Any event or circumstance that could harm assets.
+- **Security Controls**: Safeguards to reduce specific security risks.
+- **Security Frameworks**: Guidelines to build security policies and reduce risk.
+- **Security Posture**: An org's ability to manage defenses and respond to threats.
+- **Security Audit**: Review of security controls against a standard checklist.
+--------------------------------------------------
+
+
+
+
 
 
 
