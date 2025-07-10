@@ -838,7 +838,86 @@ Controls define ***how*** to do it.
 * **CSF** says: "Here’s the step-by-step plan we’ll follow to make sure that happens."
 
 ---
+🔐 What Is a Security Audit?
+A security audit is a structured, independent review of an organization's:
 
+Security controls
+
+Policies
+
+Procedures
+
+🎯 Purpose:
+Ensure systems align with internal policies and external regulations.
+
+Identify and fix vulnerabilities.
+
+Strengthen the security posture of the organization.
+
+🧭 Goals & Objectives of an Audit
+Goals	                               Objectives
+Validate IT practices            	Identify gaps and remediation areas
+Ensure compliance                	Provide a roadmap to address shortcomings
+Reduce risk of breaches          	Improve data protection strategies
+Avoid legal/financial penalties  	Ensure readiness for audits by government/regulatory bodies
+
+📊 Factors That Influence Audit Requirements
+Industry Type – Finance vs. Healthcare vs. Education.
+
+Organization Size – Small business vs. large enterprise.
+
+Applicable Regulations – HIPAA, GDPR, SOX, PCI-DSS, etc.
+
+Geographical Location – Local laws and data sovereignty rules.
+
+Voluntary Compliance Choices – E.g., ISO 27001 for reputation and assurance.
+
+🧩 Frameworks & Controls in Audits
+Frameworks guide the “how” of audits.
+
+📚 Common Frameworks:
+NIST CSF – Used by U.S. entities.
+
+ISO 27001/27002 – Internationally recognized.
+
+CIS Controls – Practical recommendations.
+
+🔐 Controls (3 Categories):
+Administrative / Managerial – Policies, procedures, training.
+
+Technical – Firewalls, encryption, intrusion detection.
+
+Physical – Locked server rooms, security cameras.
+
+✅ Audit Checklist: Step-by-Step
+Step	Details
+1. Define Scope	What’s being audited? (e.g., systems, data, firewalls)
+2. Set Audit Frequency	Annual, bi-annual, quarterly, or continuous
+3. Review Policies	Are security policies being followed by staff?
+4. Perform Risk Assessment	Evaluate risk levels from gaps in budget, tools, or processes
+5. Conduct the Audit	Test controls, check compliance, analyze vulnerabilities
+6. Create Mitigation Plan	Plan to fix or reduce risks (patches, training, upgrades)
+7. Communicate Results	Share audit report with key stakeholders, including risk score & action plan
+
+📝 Key Takeaways
+Security audits help proactively safeguard systems and data.
+
+They are essential for compliance, risk reduction, and continuous improvement.
+
+Using standard frameworks and well-structured checklists enhances effectiveness.
+
+Communication of audit results is crucial for executive decision-making.
+
+📚 Further Learning Suggestions
+To dive deeper into audits:
+
+Review NIST’s Cybersecurity Framework
+
+Explore ISO 27001 implementation guides
+
+Practice using audit templates and checklists
+
+Try tools like OpenVAS, Nessus, or Nikto for technical audits
 
 
 
@@ -868,3 +947,5 @@ Creating or revising a resume
 
 ## ⏭️ To-Do:
 - Start TCP/IP course tomorrow (June 28)
+
+  
