@@ -1136,6 +1136,190 @@ As a cybersecurity professional, you’ll work with various tools to monitor, de
 
 > 📘 **Pro Tip**: Experiment with both during labs and training to get hands-on experience and decide what works best for your use cases.
 
+# 🛡️ Use SIEM Tools to Protect Organizations
+
+Security Information and Event Management (SIEM) tools help organizations monitor, detect, and respond to threats by aggregating and analyzing log data from multiple sources.
+
+---
+
+## 🧰 Common SIEM Tools
+
+### 🔸 Splunk
+Splunk provides both **Enterprise** and **Cloud** SIEM solutions. It helps security professionals collect, search, monitor, and analyze logs to gain full visibility into an organization’s operations.
+
+#### 📊 Splunk Dashboards
+
+| Dashboard | Purpose |
+|----------|---------|
+| **Security Posture** | Displays 24h view of notable events; used to assess infrastructure performance and identify threats in real time. |
+| **Executive Summary** | High-level overview of the organization’s security health over time; useful for reporting to stakeholders. |
+| **Incident Review** | Highlights suspicious patterns and provides a timeline of events leading up to incidents. |
+| **Risk Analysis** | Detects unusual behavior by specific users, devices, or IPs; helps prioritize mitigation efforts. |
+
+---
+
+### 🔸 Chronicle (Google Cloud-native SIEM)
+Chronicle is a cloud-native SIEM solution designed to analyze and retain massive log volumes with fast, scalable searches.
+
+#### 📊 Chronicle Dashboards
+
+| Dashboard | Purpose |
+|-----------|---------|
+| **Enterprise Insights** | Shows recent alerts, IOCs (Indicators of Compromise), severity levels, and threat confidence scores. |
+| **Data Ingestion & Health** | Monitors log source health and success rates of ingestion pipelines. |
+| **IOC Matches** | Highlights top threats based on IOCs like domain names and IPs, helping prioritize response. |
+| **Main Dashboard** | High-level summary of alerting, events, and ingestion activity; useful for identifying threat trends. |
+| **Rule Detections** | Displays detection rule performance over time, showing frequent or severe incidents. |
+| **User Sign-In Overview** | Tracks user access behavior; helps detect anomalies like sign-ins from multiple locations. |
+
+---
+
+## 💡 Key Takeaways
+
+- SIEM tools **organize, analyze, and visualize** large volumes of log data.
+- Dashboards help analysts **focus on high-priority threats** quickly.
+- Both **open-source** and **enterprise-level** SIEMs are essential in modern cybersecurity workflows.
+- You'll gain hands-on experience with SIEM search queries and automation features later in the course.
+
+---
+
+> 🔍 **Pro Tip**: Keep practicing with tools like Splunk, Chronicle, or even ELK/Wazuh to get comfortable reading dashboards and logs. It’s a key real-world skill!
+# 🧠 Glossary – Course 2, Module 3
+
+A collection of key cybersecurity terms and definitions from the module.
+
+---
+
+### **Chronicle**
+> A cloud-native tool designed to retain, analyze, and search data.
+
+---
+
+### **Incident Response**
+> An organization’s quick attempt to identify an attack, contain the damage, and correct the effects of a security breach.
+
+---
+
+### **Log**
+> A record of events that occur within an organization’s systems.
+
+---
+
+### **Metrics**
+> Key technical attributes such as response time, availability, and failure rate, which are used to assess the performance of a software application.
+
+---
+
+### **Operating System (OS)**
+> The interface between computer hardware and the user.
+
+---
+
+### **Playbook**
+> A manual that provides details about any operational action.
+
+---
+
+### **Security Information and Event Management (SIEM)**
+> An application that collects and analyzes log data to monitor critical activities in an organization.
+
+---
+
+### **Security Orchestration, Automation, and Response (SOAR)**
+> A collection of applications, tools, and workflows that use automation to respond to security events.
+
+---
+
+### **SIEM Tools**
+> A software platform that collects, analyzes, and correlates security data from various sources across your IT infrastructure.  
+> Helps identify and respond to security threats in real time, investigate incidents, and comply with regulations.
+
+---
+
+### **Splunk Cloud**
+> A cloud-hosted tool used to collect, search, and monitor log data.
+
+---
+
+### **Splunk Enterprise**
+> A self-hosted tool used to retain, analyze, and search an organization's log data to provide security information and alerts in real time.
+
+---
+# 📘 Cybersecurity Playbooks – Overview & Importance
+
+---
+
+## 🧾 What is a Playbook?
+
+A **playbook** is a manual that provides **predefined, up-to-date steps** for responding to specific security incidents or operational tasks. It supports cybersecurity professionals by offering a clear action plan during high-stress events like security breaches.
+
+> Think of it as a **“step-by-step guide”** used during incidents like ransomware, phishing, or system vulnerabilities.
+
+---
+
+## 🛠️ Key Components of a Playbook
+
+- **Strategy** – Sets team expectations and roles.
+- **Plan** – Defines how each task must be completed.
+- **Living Document** – Must be frequently updated to adapt to:
+  - Failures or gaps in previous versions
+  - Changes in laws/regulations (compliance)
+  - New threat actor tactics or techniques
+
+---
+
+## 📂 Types of Playbooks
+
+### 🔹 Incident Response Playbook
+Covers response steps to threats like:
+- Ransomware
+- Vishing
+- Business Email Compromise (BEC)
+
+### 🔹 Vulnerability Response Playbook
+Focuses on vulnerabilities in systems or software, helping reduce risk and downtime.
+
+> 📌 **Both are built based on an organization’s Business Continuity Plan (BCP)** and aligned with legal and regulatory frameworks.
+
+---
+
+## 🔁 Common Steps in Playbooks
+
+1. **Preparation**  
+2. **Detection**  
+3. **Analysis**  
+4. **Containment**  
+5. **Eradication**  
+6. **Recovery**  
+7. **Post-Incident Activities**  
+8. **Coordination During Investigation**
+
+> ⚠️ **Forensic Note**: Mishandling data during any of these stages can destroy its forensic integrity.
+
+---
+
+## 🔑 Key Takeaways
+
+- Playbooks ensure consistency, legal compliance, and reduced human error.
+- They evolve with each incident — use them to **learn and improve response**.
+- Entry-level professionals will often follow playbooks in real scenarios.
+- **Geographic differences** (e.g., data privacy laws) impact playbook structure.
+
+---
+
+## 🌍 International Playbook Resources
+
+| Country | Resource |
+|--------|----------|
+| 🇬🇧 UK | National Cyber Security Centre (NCSC) - Incident Management |
+| 🇦🇺 Australia | Cyber Incident Response Plan |
+| 🇯🇵 Japan | JPCERT/CC – Vulnerability Handling Guidelines |
+| 🇨🇦 Canada | Government Ransomware Playbook |
+| 🏴 Scotland | Government Playbook Templates |
+
+---
+
+> ✅ **Pro Tip**: Learn to create and follow playbooks. You'll likely use one on your very first security incident job!
 
 
 
