@@ -1,3 +1,10 @@
+| Phase                                    | Goal                                | Milestones                                                                      |
+| ---------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------- |
+| **1. Foundations** (Now–3 months)        | Learn core tools + concepts         | Master SIEM, SOAR, Linux CLI, Networking, Python for Sec                        |
+| **2. Hands-On Projects** (4–7 months)    | Build a solid portfolio             | Complete 7–10 GitHub projects like scanners, detection tools, automation        |
+| **3. Internships & Certs** (7–10 months) | Get recognized by recruiters        | Finish Security+, earn Google/Coursera badges, start internships (virtual/real) |
+| **4. Interview Prep** (10–14 months)     | Crack technical & behavioral rounds | Practice system design, whiteboard, and behavioral questions daily              |
+
 # cyber-journal
 Weekly cybersecurity learning journal
 
