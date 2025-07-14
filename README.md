@@ -1503,6 +1503,113 @@ Focus	Monitoring	Orchestration and automation
 - **Vulnerability**: A weakness that can be exploited by a threat.
 
 ---
+# 🛡️ Network Components, Devices, and Diagrams
+
+This document provides an overview of network architecture and the key components used in enterprise and home networks. It is useful for aspiring cybersecurity professionals to understand the flow of data, vulnerabilities, and how attackers exploit network elements.
+
+---
+
+## 📶 What Is a Network?
+
+A **network** is the infrastructure that connects multiple devices, enabling them to communicate and share data. These devices communicate via data packets, which contain source and destination information.
+
+---
+
+## 📦 Key Network Devices
+
+### 1. **Devices & Computers**
+- Examples: desktops, laptops, mobile phones, tablets
+- Each has a unique **MAC** and **IP address**
+- Use **network interfaces** to send/receive packets
+- Connect via **wired (Ethernet)** or **wireless (Wi-Fi)**
+
+---
+
+### 2. **Firewall**
+- First line of defense against external threats
+- Filters incoming and outgoing traffic based on rules
+- Sits between **trusted internal** and **untrusted external networks**
+
+---
+
+### 3. **Server**
+- Provides services to clients in a **client-server model**
+- Common types:
+  - **DNS Servers** (domain lookups)
+  - **Mail Servers** (email)
+  - **File Servers** (document storage/retrieval)
+
+---
+
+### 4. **Hubs vs. Switches**
+
+#### 🔌 Hub:
+- Broadcasts all traffic to all connected devices
+- Susceptible to **eavesdropping**
+- Rarely used today
+
+#### 🔀 Switch:
+- Sends packets only to intended recipient using **MAC address table**
+- Improves **performance and security**
+- Operates at the **Data Link Layer** (Layer 2)
+
+---
+
+### 5. **Router**
+- Directs traffic between different networks
+- Uses **IP address** to forward packets
+- Operates at the **Network Layer** (Layer 3)
+- May include firewall functionality
+
+---
+
+### 6. **Modem**
+- Connects local network to the **Internet**
+- Converts ISP signals into digital form
+- Typically connects to a router
+
+---
+
+### 7. **Wireless Access Point (WAP)**
+- Creates a **Wi-Fi** network using radio waves
+- Devices connect via **wireless adapters**
+- Uses **Wi-Fi protocols** to send/receive data
+
+---
+
+> In this sample:
+> - The router connects to the internet via modem
+> - Firewall protects the internal network
+> - Switch adds more Ethernet ports for devices
+> - Server is accessible to all connected devices
+
+---
+
+## 🕵️ Using Network Diagrams in Security
+
+**Network diagrams** help analysts:
+- Visualize the architecture and interconnections
+- Identify **vulnerabilities** and **choke points**
+- Plan and document **security policies**
+- Respond to incidents with better context
+
+---
+
+## 🔑 Key Takeaways
+- Understanding the role of each device is essential for identifying vulnerabilities
+- Firewalls, routers, and switches are critical for both **performance** and **security**
+- Diagrams support decision-making during **incident response** and **network planning**
+
+---
+
+## 📚 References
+
+- Google Cybersecurity Certificate - Module 3
+- Cisco Networking Basics
+- OWASP Secure Network Design Guide
+
+---
+
 
 
 
