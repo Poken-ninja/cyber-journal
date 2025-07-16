@@ -1865,6 +1865,154 @@ The **OSI model** standardizes the functions of a communication system into **se
 - 🧩 **OSI**: Detailed conceptual model (7 layers) — great for learning & debugging.
 - 🧩 **TCP/IP**: Practical implementation model (4 layers) — used in real-world networking.
 
+<img width="1286" height="784" alt="image" src="https://github.com/user-attachments/assets/2f8279f4-8212-4c8d-9b3b-d61c8de29cb3" />
+<img width="1786" height="886" alt="image" src="https://github.com/user-attachments/assets/507826ec-2127-4105-aab8-28364370c31d" />
+<img width="1272" height="922" alt="image" src="https://github.com/user-attachments/assets/3ae58519-9d5c-4d50-9554-1a147233be23" />
+<img width="1216" height="1034" alt="image" src="https://github.com/user-attachments/assets/94d70dff-a4ab-4e5f-ad29-bff234e543af" />
+<img width="1233" height="920" alt="image" src="https://github.com/user-attachments/assets/c403765f-5ca4-43b1-afa4-612203e5b9cb" />
+<img width="1252" height="875" alt="image" src="https://github.com/user-attachments/assets/4b239b81-8e6b-4c1e-baf1-74d66016bd9a" />
+<img width="1322" height="1070" alt="image" src="https://github.com/user-attachments/assets/d1214061-8019-4f45-bdf3-2e797311e8e4" />
+<img width="1271" height="928" alt="image" src="https://github.com/user-attachments/assets/1e62c4d8-f56f-46fe-930d-d8cd5b659505" />
+<img width="1304" height="1077" alt="image" src="https://github.com/user-attachments/assets/ac46c1c5-9ed4-4823-beaa-38c7083d09e8" />
+<img width="1286" height="1075" alt="image" src="https://github.com/user-attachments/assets/de648efb-3b74-4dc3-ad41-e59faf3e57b6" />
+<img width="1151" height="954" alt="image" src="https://github.com/user-attachments/assets/1d968300-6bc5-41e6-8efa-34e42511a342" />
+<img width="1218" height="743" alt="image" src="https://github.com/user-attachments/assets/bad5a3e6-ea3e-4bd9-bebc-a7b668580ed0" />
+<img width="1263" height="1079" alt="image" src="https://github.com/user-attachments/assets/57976682-6354-4a94-b3b6-53f3b9077cdf" />
+<img width="1310" height="822" alt="image" src="https://github.com/user-attachments/assets/427980c9-bf76-47a5-9794-5cc64ab70a1c" />
+<img width="1210" height="857" alt="image" src="https://github.com/user-attachments/assets/a1ea3179-dc24-4efb-a7cf-f5422627a9d9" />
+
+-------------
+## ✅ IPv4 Protocol Summary
+
+### 🌐 1. Basic Terminology
+
+| Term         | Meaning                                                    |
+| ------------ | ---------------------------------------------------------- |
+| **Octet**    | 1 Byte = 8 bits                                            |
+| **Word**     | Group of bits, typically 16 or 32 bits                     |
+| **Flag**     | A 1-bit control value (1 = set, 0 = clear) used in headers |
+| **Datagram** | Self-contained packet that can be routed independently     |
+
+---
+
+### 📦 2. IPv4 Packet Structure
+
+* **Two parts:**
+
+  * Header
+  * Payload (includes TCP/UDP header + actual data)
+
+---
+
+### 🧱 3. IPv4 Header Fields
+
+| Field                   | Size     | Description                                                                       |
+| ----------------------- | -------- | --------------------------------------------------------------------------------- |
+| **Version**             | 4 bits   | Identifies the version (e.g., 4 for IPv4)                                         |
+| **IHL**                 | 4 bits   | Internet Header Length (in 32-bit words). Minimum = 5 → 20 bytes                  |
+| **DS / ECN**            | 1 byte   | DS (6 bits): QoS; ECN (2 bits): Congestion notification                           |
+| **Total Length**        | 16 bits  | Total packet size (max = 65,535 bytes)                                            |
+| **Identification**      | 16 bits  | Used to identify fragments of the same packet                                     |
+| **Flags**               | 3 bits   | - Bit 0: Reserved<br>- Bit 1: Don't Fragment (DF)<br>- Bit 2: More Fragments (MF) |
+| **Fragment Offset**     | 13 bits  | Position of fragment in original packet                                           |
+| **TTL**                 | 8 bits   | Time To Live; decreases at each hop                                               |
+| **Protocol**            | 8 bits   | Identifies next header (e.g., TCP=6, UDP=17, ICMP=1)                              |
+| **Header Checksum**     | 16 bits  | Error check for header only                                                       |
+| **Source Address**      | 32 bits  | IPv4 source IP                                                                    |
+| **Destination Address** | 32 bits  | IPv4 destination IP                                                               |
+| **Options + Padding**   | Variable | Optional settings; padding aligns to 32-bit boundary                              |
+
+---
+
+### 📶 4. MTU (Maximum Transmission Unit)
+
+| Network Type | MTU (bytes) | Explanation                    |
+| ------------ | ----------- | ------------------------------ |
+| **Ethernet** | 1500        | Standard defined by IEEE 802.3 |
+| **Wi-Fi**    | 2304        | IEEE 802.11 (MSDU size)        |
+
+*If packet > MTU → Fragmentation occurs*
+
+---
+
+### ✂️ 5. Fragmentation Fields
+
+* **Identification**: Same for all fragments of one packet
+* **Flags**:
+
+  * `DF (Don't Fragment)` = 1 → No fragmentation allowed
+  * `MF (More Fragments)` = 1 → More fragments are coming
+* **Fragment Offset**: Where the fragment fits in the original packet
+
+---
+
+### 🕑 6. TTL (Time to Live)
+
+* Limits the lifespan of the packet in the network
+* Each router decreases TTL by **at least 1**
+* TTL = 0 → Packet is **discarded**
+
+---
+
+### ⚙️ 7. Protocol Field
+
+Indicates the **next layer's protocol** after IP:
+
+| Protocol | Number | Description                        |
+| -------- | ------ | ---------------------------------- |
+| TCP      | 6      | Transmission Control Protocol      |
+| UDP      | 17     | User Datagram Protocol             |
+| ICMP     | 1      | Internet Control Message Protocol  |
+| OSPF     | 89     | Open Shortest Path First (routing) |
+
+---
+
+### 🔍 8. Header Checksum
+
+* Protects **only the IPv4 header**, not the payload
+* Recalculated at each router (because TTL & other fields change)
+
+---
+
+### 🧭 9. IPv4 Addressing
+
+* **32-bit** addresses (e.g., `192.168.1.1`)
+* Old: Classful (A, B, C, D, E) – now outdated
+* New: **CIDR** (Classless Inter-Domain Routing)
+
+---
+
+### 🔢 10. CIDR and VLSM
+
+| Term        | Meaning                                                       |
+| ----------- | ------------------------------------------------------------- |
+| **CIDR**    | IP/prefix → e.g., `192.168.0.0/24`                            |
+| **/24**     | 24 bits for network → Subnet mask: `255.255.255.0`            |
+| **VLSM**    | Variable-Length Subnet Masking → Allows flexible subnet sizes |
+| **Example** | `123.234.100.56/24` → 256 IPs in subnet (2⁸ = 256)            |
+
+---
+
+### 🌐 11. Address Allocation
+
+* **IANA** → Assigns to **RIRs** (Regional Internet Registries)
+* RIRs → Assign to **LIRs** (Local Internet Registries)
+* LIRs → Assign IPs to end users and ISPs based on need
+
+---
+
+### 🧩 12. Options & Padding
+
+* Optional field for extra instructions (e.g., routing, timestamps)
+* **Padding** added to make header a multiple of **32 bits**
+
+---
+
+### 📚 Reference Points
+
+* **RFC 1594** → Definition of *Datagram*
+* **IETF Standards** → Governing body for IP and internet protocols
+
 ---
 
 ## ✅ Key Takeaways
