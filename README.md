@@ -2415,6 +2415,98 @@ Thanks Sur! I've added the new content on **NAT, RPC, FTP, Email (POP3/IMAP/SMTP
 * Used for **outgoing mail**
 
 ---
+Perfect, Sur! Here’s your **full list of ALL TRUE (correct) statements** combined from ***all*** the quizzes you shared so far — clear, concise, and organized by topic:
+
+---
+
+# ✅ **Networking: All True Statements (for Fast Revision)**
+
+---
+
+## 🌐 **IGP & EGP (Interior vs Exterior Gateway Protocol)**
+
+1. **The most widely used IGP in the Internet is OSPF (Open Shortest Path First)**
+2. **The EGP used in the Internet is BGP4 (Border Gateway Protocol version 4)**
+3. **IGP categories include LS (Link-State) and DV (Distance-Vector) routing protocols**
+4. **IS-IS (Intermediate System to Intermediate System) is an IGP**
+5. **eBGP (external BGP) is BGP routing used between ASs (Autonomous Systems)**
+6. **iBGP (internal BGP) is the BGP routing used within an AS**
+7. **BGP4 routing path selection is based on network policies and administrator configured rule-sets**
+
+---
+
+## 🔒 **BGP Security**
+
+8. **Routers of different ISPs may use different encryption and security schemes**
+9. **BGP security is a challenging issue because BGP Routers commonly belong to different ISPs (Internet Service Providers)**
+10. **BGP security is used in authentication and protection against spoofed BGP messages and malware**
+11. **BGP routers need to exchange (setup and update) information with each other to be able to adapt to changes in routing and security conditions**
+
+---
+
+## 📡 **OSPF (Open Shortest Path First)**
+
+12. **The SPT setup from the OSPF protocol is a collection of minimum cost routing paths (using Dijkstra's algorithm) from a Source to each Destination node in the network**
+13. **OSPF protocol results in a loop-free SPT (Shortest Path Tree) to be used for routing packets**
+14. **In the Internet, OSPF is most commonly used for routing of IPv4, IPv6, and CIDR addressed packets**
+15. **OSPF can use RTT (Round-Trip Time), reliability, availability, distance of a router, number of hops to reach the destination, or the throughput as a link cost factor**
+16. **RTT (Round-Trip Time)** is an OSPF link cost factor
+17. **Distance of a router** is an OSPF link cost factor
+18. **Reliability** is an OSPF link cost factor
+19. **Throughput** is an OSPF link cost factor
+20. **Number of hops to reach the destination** is an OSPF link cost factor
+21. **Availability** is an OSPF link cost factor
+
+---
+
+## 🔀 **Router Types in OSPF**
+
+22. **IR (Internal Router) is used when all routing interfaces belong to the same network area**
+23. **ABR (Area Border Router) is used to connect one or more subarea networks to the backbone network**
+24. **BR (Backbone Router) is used to connect to the backbone network**
+
+---
+
+## 🧭 **ARP & NDP**
+
+25. **In a Wi-Fi mobile device, ARP can be used to map the mobile device’s IPv4 address to its Wi-Fi MAC address**
+26. **ARP parameter values are managed by the IANA (Internet Assigned Numbers Authority)**
+27. **IPv6 networks use NDP (Neighbor Discovery Protocol) for ARP functionality**
+28. **ARP can be used to map a computer's IPv4 address to its Ethernet MAC (Medium Access Control) address**
+
+---
+
+## 🔁 **NAT (Network Address Translation)**
+
+29. **One-to-Many NAT provides enhanced security**
+30. **One-to-One NAT is used in interconnection of two incompatibly addressed assigned IP networks**
+31. **One-to-Many NAT is also called IP Masquerading**
+
+---
+
+## 🛰 **RPC (Remote Procedure Call)**
+
+32. **RPC is used to enable a function or procedure to be executed on a remote computer, and therefore, RPC can enable access to a remote computer as if it is a local computer**
+33. **RPC needs recovery procedures to help overcome unpredictable network problems**
+34. **RPC request and response procedures use 'Request' and 'Response' messages between the client and server computer**
+
+---
+
+## 📁 **FTP (File Transfer Protocol)**
+
+35. **FTP with TLS (Transport Layer Security) protection (FTPS) is commonly used to transfer files from a server to a client computer with protection**
+36. **FTP passive mode is used when the client is behind a firewall and cannot accept incoming TCP connections from the server**
+37. **FTP Block mode divides data into blocks and uses TCP to transfer the data blocks**
+38. **FTP Compressed mode applies data compression when transferring data**
+39. **FTP is used to transfer files from a server to a client computer**
+
+---
+
+## 📧 **Email Protocols (POP3, IMAP, SMTP)**
+
+40. **POP3 (Post Office Protocol version 3) can be used to move e-mails from the server onto your computer**
+41. **IMAP (Internet Message Access Protocol) enables a user e-mail account to be managed from multiple e-mail devices**
+42. **SMTP (Simple Mail Transfer Protocol) is used to send and receive e-mails between servers**
 
 
 
