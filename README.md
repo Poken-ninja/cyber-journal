@@ -2031,6 +2031,158 @@ Indicates the **next layer's protocol** after IP:
 - [NetworkChuck OSI Layers (YouTube)](https://www.youtube.com/watch?v=vv4y_uOneC0)
 
 ---
+**Networking Revision Guide (IPv6, IPv4, TCP, UDP, CIDR)**
+
+---
+
+### ✅ What is a Datagram?
+
+* A **datagram** is a **self-contained packet** that carries all necessary information to be routed from source to destination **independently**.
+* Both **IPv4** and **IPv6** packets are datagrams.
+
+---
+
+### 🌐 IPv4 vs IPv6
+
+* **IPv4** = 32-bit address, \~4.3 billion addresses
+* **IPv6** = 128-bit address, massive number of addresses
+* IPv6 headers are **simpler** than IPv4 (e.g., **no Header Checksum** in IPv6)
+
+---
+
+### 🧱 IPv4 Packet Structure
+
+**Header (min 20 bytes)** + **Payload**
+
+| Field                        | Purpose                                                            |
+| ---------------------------- | ------------------------------------------------------------------ |
+| Version                      | 4 bits. For IPv4 = `0100`                                          |
+| IHL                          | Header Length (in 32-bit words). Min = 5 (i.e., 20 bytes)          |
+| DS & ECN                     | For Quality of Service & congestion control                        |
+| Total Length                 | Max = 65,535 bytes. Total size of packet including header and data |
+| Identification               | Used for fragmenting and reassembly                                |
+| Flags                        | 3 bits (Don't Fragment = 1, More Fragments = 1, Reserved = 0)      |
+| Fragment Offset              | Used for reordering fragments                                      |
+| TTL                          | Time To Live, decreases at each hop. If 0, packet is dropped       |
+| Protocol                     | Indicates what's in the payload (TCP=6, UDP=17)                    |
+| Header Checksum              | Protects **only the header**, recalculated at each router          |
+| Source & Destination Address | 32 bits each                                                       |
+| Options & Padding            | Rarely used, adds up to multiple of 32-bit words                   |
+
+---
+
+### 🖧 MTU (Maximum Transmission Unit)
+
+* Max IP packet size **depends on Layer 2**:
+
+  * **Ethernet**: 1500 bytes
+  * **Wi-Fi**: 2304 bytes
+* If IP packet > MTU: fragmentation may occur unless **Don't Fragment flag = 1**
+
+---
+
+### 🧮 CIDR (Classless Inter-Domain Routing)
+
+* Format: `IP/mask`, e.g., `192.168.1.0/24`
+* `/24` means **first 24 bits are network** → **255.255.255.0**
+* Replaced classful (A, B, C) system
+* Uses **VLSM** (Variable Length Subnet Masking) to assign subnet sizes more efficiently
+* Enables **IPv4 & IPv6** block allocation to ISPs or users
+
+---
+
+### 🧾 Header Checksum (IPv4 only)
+
+* 16-bit field
+* Used for error detection in **header only**, **not payload**
+* Recomputed at each router due to changes like TTL decrement
+
+---
+
+### 🚀 TCP (Transmission Control Protocol)
+
+* **Connection-oriented**, reliable
+* Header size: **min 20 bytes**
+
+| Field                   | Purpose                                        |
+| ----------------------- | ---------------------------------------------- |
+| Source Port / Dest Port | App layer communication                        |
+| Sequence Number         | Order of bytes                                 |
+| Acknowledgment Number   | Confirms receipt                               |
+| Data Offset             | Header length in 32-bit words                  |
+| Flags                   | URG, ACK, PSH, RST, SYN, FIN                   |
+| Window                  | Flow control                                   |
+| Checksum                | Covers header + data + pseudo header           |
+| Urgent Pointer          | Used if URG flag = 1 (urgent data starts here) |
+
+* **PSH Flag**: Pushes data to app immediately
+* **URG Flag + Urgent Pointer**: Mark part of data as urgent
+
+---
+
+### 📦 UDP (User Datagram Protocol)
+
+* **Connectionless**, fast, unreliable
+* Header: 8 bytes only
+
+| Field                   | Purpose                              |
+| ----------------------- | ------------------------------------ |
+| Source Port / Dest Port | Communication                        |
+| Length                  | UDP header + data length             |
+| Checksum                | Optional in IPv4 (mandatory in IPv6) |
+
+* **No flags**, **no urgent pointer**, **no sequence or ack numbers**
+* **TTL is handled by IP**, not UDP/TCP
+
+---
+
+### ❌ Common Wrong Statements (For MCQs)
+
+* IPv6 **is** a datagram → ✅ TRUE
+* IPv4 can always send 65,535 octets → ❌ FALSE (limited by MTU)
+* UDP/TCP has TTL → ❌ FALSE (TTL is part of IP header)
+* IPv4 Jumbogram exists → ❌ FALSE (Only IPv6 has Jumbograms)
+* UDP uses PSH, URG flags → ❌ FALSE (That’s TCP-only)
+* CIDR is only for IPv4 → ❌ FALSE (Used for both IPv4 & IPv6)
+
+---
+
+### ✅ IPv6 Jumbograms
+
+* For data > 65,535 bytes
+* Payload Length = 0 (all bits zero)
+* Jumbo Payload Option header used
+
+---
+
+### 🔢 Binary ↔ Hex ↔ Decimal Table (IPv6 help)
+
+| Binary                                 | Hex | Decimal |
+| -------------------------------------- | --- | ------- |
+| 0000                                   | 0x0 | 0       |
+| 0001                                   | 0x1 | 1       |
+| 1000                                   | 0x8 | 8       |
+| 1010                                   | 0xa | 10      |
+| 1011                                   | 0xb | 11      |
+| 1100                                   | 0xc | 12      |
+| 1101                                   | 0xd | 13      |
+| 1110                                   | 0xe | 14      |
+| 1111                                   | 0xf | 15      |
+| **Wrong example**: `0000 = 0xg = 16` ❌ |     |         |
+
+---
+
+### ✨ Summary
+
+* **IPv4 & IPv6** use datagrams
+* **TCP** = reliable, connection-based; **UDP** = fast, connectionless
+* **CIDR** is flexible and used in both IPv4/IPv6
+* MTU limits packet size despite total length allowing 65,535
+* Checksum protects headers; **TCP's checksum covers more**
+
+---
+
+> ✅ Tip: Use Wireshark to inspect real packet headers. It’ll make these fields make sense like magic!
 
 
 
