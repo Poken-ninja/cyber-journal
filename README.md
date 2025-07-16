@@ -2184,6 +2184,145 @@ Indicates the **next layer's protocol** after IP:
 
 > ✅ Tip: Use Wireshark to inspect real packet headers. It’ll make these fields make sense like magic!
 
+# Networking Revision Guide (IPv6 → TCP/IP → Routing)
+
+---
+
+## 🌐 Internet Routing & Protocols (IGP vs EGP)
+
+### 🔸 Autonomous Systems (AS)
+
+* **Autonomous System**: A network (like an ISP, university, or enterprise) controlled by a single admin.
+
+### 🔸 IGP (Interior Gateway Protocol)
+
+* Used **within** an AS.
+* Examples:
+
+  * **RIP** (Routing Information Protocol) – Distance-vector
+  * **OSPF** (Open Shortest Path First) – Link-state
+  * **IS-IS** – Link-state
+  * **EIGRP** – Cisco proprietary, hybrid
+
+### 🔸 EGP (Exterior Gateway Protocol)
+
+* Used **between** ASes.
+* Example:
+
+  * **BGPv4** (Border Gateway Protocol v4)
+
+    * Used **on the Internet**.
+    * Supports **external BGP (eBGP)** & **internal BGP (iBGP)**.
+
+### 🔒 BGP Security Challenges
+
+* Different ISPs → different encryption/security protocols → harder coordination
+* BGP messages vulnerable to **spoofing** & **malware** if not properly secured
+
+---
+
+## 📡 OSPF (Open Shortest Path First)
+
+### 📌 Overview
+
+* Most widely used IGP
+* Supports **IPv4, IPv6, CIDR**
+* Uses **Link-State Routing** and **Dijkstra's Algorithm**
+
+### 🧠 How It Works
+
+1. Routers collect **Link-State Advertisements (LSAs)**
+2. Build **Link-State Database (LSDB)**
+3. Compute **Shortest Path Tree (SPT)** from the source
+4. Populate routing table based on SPT
+
+### 🔁 Updates
+
+* If network changes, all steps repeat to maintain accuracy.
+
+### ⚖️ Link Cost Factors
+
+* **Hop count**, **RTT**, **throughput**, **availability**, **reliability**
+
+### 📐 Dijkstra’s Algorithm Steps
+
+1. Start with only source node in set `M`
+2. Add nearest neighbor with minimum cumulative link cost
+3. Repeat until all nodes are in set `M`
+4. Result = shortest path tree with **no loops**
+
+### 📊 Routing Table Example
+
+* Source → Destination with least cost path
+
+### 🧩 OSPF Router Types
+
+* **IR** (Internal Router): All interfaces in same area
+* **ABR** (Area Border Router): Connects sub-areas to backbone
+* **BR** (Backbone Router): Within backbone area
+* **ASBR** (Autonomous System Boundary Router): Connects ASes
+
+### 📣 Multicast OSPF (MOSPF)
+
+* Extension of OSPF for multicast routing
+* Uses **group membership** info
+* Alternate: OSPF with **PIM** (Protocol Independent Multicast)
+
+### 🌐 OSPF Subdivision
+
+* Divides large network into subareas + backbone
+* Benefits: better administration, performance, security
+
+### 🚦 Traffic Engineering
+
+* Goal: Optimize routing reliability and performance
+* Works for IP & Optical networks
+
+---
+
+## 🧭 Address Resolution Protocol (ARP) & NDP
+
+### 📌 ARP
+
+* Maps **IPv4 address → MAC address** (Data Link Layer)
+* Used in **Ethernet** and **Wi-Fi**
+* Defined in **RFC 826**
+* Managed by **IANA**
+
+### 🧾 ARP Packet Format
+
+| Field                | Description               |
+| -------------------- | ------------------------- |
+| Hardware Type        | Ethernet = 1              |
+| Protocol Type        | IPv4 = 0x0800             |
+| Hardware Addr Length | 6 (MAC)                   |
+| Protocol Addr Length | 4 (IPv4)                  |
+| Operation            | 1=Request, 2=Reply        |
+| Sender MAC           | Sender’s MAC              |
+| Sender IP            | Sender’s IP               |
+| Target MAC           | Receiver’s MAC (if known) |
+| Target IP            | Receiver’s IP             |
+
+### 📌 NDP (Neighbor Discovery Protocol)
+
+* Used in **IPv6** (replaces ARP)
+* Also maps IPv6 → MAC
+* Used for Wi-Fi and other IPv6-enabled networks
+
+---
+
+## ✅ Summary Checklist for Revision
+
+| Concept             | Key Points                                    |
+| ------------------- | --------------------------------------------- |
+| IGP vs EGP          | Inside vs Between AS                          |
+| BGP                 | eBGP + iBGP, Security is hard                 |
+| OSPF                | Link-State, Dijkstra, Loop-free, Router Types |
+| ARP/NDP             | IPv4 uses ARP, IPv6 uses NDP                  |
+| Traffic Engineering | Reliability, Performance boost                |
+
+---
+
 
 
 
