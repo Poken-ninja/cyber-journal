@@ -2322,6 +2322,104 @@ Indicates the **next layer's protocol** after IP:
 | Traffic Engineering | Reliability, Performance boost                |
 
 ---
+Thanks Sur! I've added the new content on **NAT, RPC, FTP, Email (POP3/IMAP/SMTP)** without repeating earlier sections. Here's the updated GitHub-style content at the **bottom of your document**:
+
+---
+
+## 🔄 NAT (Network Address Translation)
+
+### 🔸 One-to-One NAT (Basic NAT)
+
+* Maps **1 private IP ↔ 1 public IP**
+* Used when two **incompatible IP address spaces** (e.g., internal company and external network) need to communicate
+* Ideal for **internal networks with static mapping needs**
+
+### 🔸 One-to-Many NAT (IP Masquerading)
+
+* **Multiple private IPs share one public IP**
+* Widely used in homes and offices
+* Key Benefits:
+
+  * **Hides internal structure**, adding **security**
+  * Conserves **IPv4 public address space**, which is nearly exhausted
+
+---
+
+## 🛰 RPC (Remote Procedure Call)
+
+* Enables **remote execution** of functions on another machine
+* Acts like a local call for the developer
+* **Flow**:
+
+  1. Client sends **request** with parameters to server
+  2. Server **executes** procedure & sends back response
+* Needs **recovery mechanisms** for network failures
+
+---
+
+## 📁 FTP (File Transfer Protocol)
+
+### 🔐 Security
+
+* Defined in **RFC 959**
+* Uses **TCP/IP**
+* Credentials: **Username + Password**
+* **FTPS** adds TLS encryption
+
+### 🛠 Modes
+
+* **Active Mode**:
+
+  * Client tells server which port to use
+  * Server initiates data transfer
+* **Passive Mode**:
+
+  * Used behind firewalls
+  * Server gives IP + port; client connects to it
+* **Enhanced Passive Mode**:
+
+  * Supports **IPv6**
+  * Defined in **RFC 2428**
+
+### 📦 Transfer Types
+
+* **Stream Mode** – TCP stream, least processing
+* **Block Mode** – Data sent in blocks
+* **Compressed Mode** – Uses compression (e.g., **RLE**)
+
+---
+
+## 📧 Email Protocols: POP3, IMAP, SMTP
+
+### 🔸 POP3 (Post Office Protocol v3)
+
+* Downloads email from server to **one device**
+* Email is **removed** from server (unless configured to keep)
+* Simple & fast, but lacks multi-device sync
+
+### 🔸 IMAP (Internet Message Access Protocol v4)
+
+* Manages mailbox **on the server**
+* Supports **multiple devices**
+* Keeps messages on server until explicitly deleted
+* Supports **complex email querying**
+
+### 🔒 Security
+
+* Supports **TLS, STARTTLS, SSL** for encryption
+
+### 📤 SMTP (Simple Mail Transfer Protocol)
+
+* Sends emails **between servers**
+* **Text-based**, runs over TCP/IP
+* Used for **outgoing mail**
+
+---
+
+
+
+
+
 
 
 
