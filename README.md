@@ -2764,7 +2764,84 @@ Smurf attack: A network attack performed when an attacker sniffs an authorized u
 
 Synchronize (SYN) flood attack: A type of DoS attack that simulates a TCP/IP connection and floods a server with SYN packets
 
+Brute Force Attacks & OS Hardening – Notes
+🛑 What is a Brute Force Attack?
+A brute force attack is a trial-and-error method used by attackers to guess login credentials and gain unauthorized access to a system.
 
+🔸 Types:
+Simple Brute Force Attack: Random combinations of usernames and passwords are tried until a match is found.
+
+Dictionary Attack: Attackers use precompiled lists of common passwords or leaked credentials to speed up the guessing process.
+
+⚠️ These methods can be automated using brute force tools.
+
+🧪 Vulnerability Assessment Techniques
+💻 Virtual Machines (VMs)
+Act as isolated environments for testing malware and software safely.
+
+Key features:
+
+Revert to a previous clean state.
+
+Prevents host OS damage (in most cases).
+
+Can be easily deleted or reset.
+
+🧫 Sandbox Environments
+Used to run untrusted code outside the production network.
+
+Helps detect malware behavior, test patches, simulate attacks.
+
+Can be physical machines or VM/cloud-based.
+
+⚠️ Some malware can detect sandbox/VM and avoid showing malicious behavior.
+
+🧰 Brute Force Attack Prevention Measures
+✅ Salting & Hashing
+Hashing: One-way encryption of data (cannot reverse).
+
+Salting: Adds randomness to passwords before hashing to prevent precomputed attacks (like rainbow tables).
+
+✅ Multi-Factor Authentication (MFA) / Two-Factor Authentication (2FA)
+Requires users to verify their identity using:
+
+Password + OTP
+
+Password + Biometric
+
+Password + Email/Phone confirmation
+
+✅ CAPTCHA / reCAPTCHA
+Ensures the login attempt is made by a human, not a bot.
+
+Google’s reCAPTCHA is widely used on websites.
+
+✅ Strong Password Policies
+Guidelines for users, including:
+
+Minimum length & complexity
+
+Password expiration & rotation
+
+No reuse of old passwords
+
+Lockout after X failed attempts
+
+🧱 OS Hardening
+Applying security configurations to reduce the attack surface of the operating system.
+
+Tasks include:
+
+Disabling unused services
+
+Applying security patches
+
+Configuring firewalls and permissions
+
+Removing default credentials
+
+🧠 Summary
+Brute force attacks exploit weak credentials. Organizations must combine secure authentication, system isolation (VMs/sandboxes), and hardening practices to protect against such threats effectively.
 
 
 
