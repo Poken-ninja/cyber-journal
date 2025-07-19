@@ -2912,8 +2912,6 @@ Misunderstanding the division of responsibility can lead to security lapses, esp
 
 ---
 
-📌 _This journal entry summarizes foundational knowledge on cloud security and helps reinforce my understanding as I build my cybersecurity skills._
-
 
 
 
