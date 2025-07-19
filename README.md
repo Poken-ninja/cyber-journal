@@ -2843,7 +2843,76 @@ Removing default credentials
 🧠 Summary
 Brute force attacks exploit weak credentials. Organizations must combine secure authentication, system isolation (VMs/sandboxes), and hardening practices to protect against such threats effectively.
 
+## ☁️ Cloud Security Considerations
 
+Earlier in this course, I was introduced to **cloud computing**, a model that enables convenient, on-demand network access to a shared pool of configurable computing resources. These resources can be provisioned and released with minimal management effort or interaction with the service provider.
+
+Just like traditional IT infrastructure, **cloud infrastructure must be secured**. This entry explores the unique security challenges presented by cloud computing and introduces the **shared responsibility model**.
+
+---
+
+### 🔐 Key Cloud Security Considerations
+
+#### 1. Identity Access Management (IAM)
+- IAM involves the processes and technologies used to manage **digital identities**.
+- Improper configuration of user roles can give unauthorized users access to critical cloud operations.
+- Proper role-based access controls are essential to minimize this risk.
+
+#### 2. Configuration Management
+- Cloud services require precise and secure configuration.
+- During **cloud migrations**, improperly configured services can introduce major vulnerabilities.
+- Misconfigurations are among the **leading causes of cloud security breaches**.
+
+#### 3. Attack Surface Expansion
+- Each service or application added to the cloud increases the **organization’s attack surface**.
+- More services = more entry points, unless the network is designed securely.
+- CSPs generally offer more secure, vetted infrastructure than traditional on-prem solutions.
+
+#### 4. Zero-Day Attacks
+- A **zero-day attack** exploits previously unknown vulnerabilities.
+- CSPs typically discover and respond to zero-days faster than traditional IT teams.
+- CSPs patch hypervisors and migrate workloads to prevent customer impact.
+
+#### 5. Visibility & Tracking
+- Like on-prem networks, cloud offers visibility via **flow logs** and **packet mirroring** tools.
+- However, organizations may not be able to inspect the underlying CSP infrastructure.
+- CSPs conduct **third-party audits** to verify the security posture and compliance.
+
+#### 6. Rapid Changes in the Cloud
+- Cloud services are updated frequently by CSPs, which can impact:
+  - Network connectivity
+  - Security settings
+  - Configuration requirements
+- Organizations must **adapt their IT processes** to align with CSP updates.
+
+---
+
+### 🤝 Shared Responsibility Model
+
+- **Cloud Service Provider (CSP)** is responsible for:
+  - Physical data centers
+  - Host operating systems
+  - Hypervisors and infrastructure-level security
+
+- **Cloud Customers** are responsible for:
+  - Data security
+  - Application configurations
+  - User access controls
+
+Misunderstanding the division of responsibility can lead to security lapses, especially in **application-level misconfigurations**.
+
+---
+
+### ✅ Key Takeaways
+
+- Cloud computing introduces **unique security challenges** that require proactive measures.
+- **Identity access management**, **configuration security**, and **visibility** are core pillars.
+- The **shared responsibility model** clarifies which security roles belong to the CSP and which are owned by the organization.
+- Cloud adoption should be paired with **continuous monitoring**, **secure configurations**, and **trained security personnel**.
+
+---
+
+📌 _This journal entry summarizes foundational knowledge on cloud security and helps reinforce my understanding as I build my cybersecurity skills._
 
 
 
