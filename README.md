@@ -2911,6 +2911,101 @@ Misunderstanding the division of responsibility can lead to security lapses, esp
 - Cloud adoption should be paired with **continuous monitoring**, **secure configurations**, and **trained security personnel**.
 
 ---
+## 🔒 Cloud Security Hardening & Cryptography
+
+Cloud infrastructure is becoming increasingly common, and like on-premise networks, cloud environments must also be secured. This entry explores **cloud security hardening practices**, **cryptography**, and the **shared responsibility model**—all key to protecting data and services in the cloud.
+
+---
+
+### 🛡️ Common Cloud Security Hardening Techniques
+
+Cloud security hardening involves using tools and best practices to **protect cloud network infrastructure** from threats. Below are the main techniques:
+
+---
+
+#### 1. Identity Access Management (IAM)
+- IAM helps manage **digital user identities** and defines **who can do what** in the cloud.
+- It ensures **authorized access** to cloud services while preventing unauthorized use.
+- Weak or misconfigured IAM settings are a **common vulnerability**.
+
+---
+
+#### 2. Hypervisors
+- A **hypervisor** separates the hardware from the virtual machines (VMs) running on it.
+- Two types:
+  - **Type 1 (bare-metal)**: Runs directly on hardware (e.g., VMware ESXi) – used by CSPs.
+  - **Type 2**: Runs on a host OS (e.g., VirtualBox).
+- CSPs manage hypervisors and patch them regularly.
+- **VM Escape**: A major threat where a hacker breaks out of a VM to access other systems.
+
+---
+
+#### 3. Baselining
+- **Baselining** sets a **standard reference configuration** for the cloud environment.
+- Helps detect and respond to unauthorized changes.
+- Examples:
+  - Restricting access to admin portals
+  - Enabling password policies and encryption
+  - Enabling threat detection (e.g., for SQL databases)
+
+---
+
+### 🔐 Cryptography in the Cloud
+
+Cryptography protects **data confidentiality and integrity** in cloud environments. It uses encryption and secure key management systems.
+
+---
+
+#### 4. Encryption
+- **Encryption** scrambles data into unreadable format (ciphertext) using a key.
+- Only those with the **decryption key** can read the original data.
+- Modern encryption depends on **key secrecy**, not algorithm secrecy.
+
+---
+
+#### 5. Cryptographic Erasure (Crypto-Shredding)
+- Involves **destroying encryption keys** instead of data itself.
+- Without the key, **data becomes unreadable**.
+- Used when cloud data needs to be **securely deleted**.
+
+---
+
+### 🔑 Key Management in the Cloud
+
+Proper key management is crucial to prevent unauthorized data access. Two common tools:
+
+- **Trusted Platform Module (TPM)**: A chip that securely stores keys and credentials.
+- **Cloud Hardware Security Module (CloudHSM)**: Manages cryptographic keys and operations like encryption/decryption in the cloud.
+
+> ⚠️ Note: 
+> Customers can bring their own encryption keys (BYOK). If lost or exposed, **CSPs cannot help recover the data**. You're responsible for your key's security.
+
+---
+
+### 🧠 Shared Responsibility in Cryptography
+
+Under the **shared responsibility model**:
+- The **CSP** secures infrastructure (e.g., hypervisors, hardware, host OS).
+- The **customer** secures:
+  - Application-level configurations
+  - IAM settings
+  - Encryption keys (if BYOK is used)
+
+Customers can also review **CSP audit reports and security certifications**. For government work, FEDRAMP provides a list of verified CSPs.
+
+---
+
+### ✅ Key Takeaways
+
+- **Cloud security hardening** involves IAM, hypervisors, baselining, encryption, and crypto-erasure.
+- **Cryptography** is essential to secure data at rest and in transit.
+- Proper **key management** and understanding your role in the **shared responsibility model** are critical to cloud data protection.
+
+---
+
+
+
+
 
 
 
