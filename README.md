@@ -3945,7 +3945,64 @@ Key takeaways
 SELECT and FROM are important keywords in SQL queries. You use SELECT to indicate which columns to return and FROM to indicate which table to query. You can also include ORDER BY in your query to organize the output. These foundational SQL skills will support you as you move into more advanced queries. 
 
 ------------
+Operators for filtering dates and numbers
+Previously, you examined operators like less than (<) or greater than (>) and explored how they can be used in filtering numeric and date and time data types. This reading summarizes what you learned and provides new examples of using operators in filters.
 
+Numbers, dates, and times in cybersecurity
+Security analysts work with more than just string data, or data consisting of an ordered sequence of characters. 
+
+They also frequently work with numeric data, or data consisting of numbers. A few examples of numeric data that you might encounter in your work as a security analyst include:
+
+the number of login attempts
+
+the count of a specific type of log entry
+
+the volume of data being sent from a source
+
+the volume of data being sent to a destination
+
+You'll also encounter date and time data, or data representing a date and/or time. As a first example, logs will generally timestamp every record. Other time and date data might include:
+
+login dates
+
+login times
+
+dates for patches 
+
+the duration of a connection
+
+Comparison operators
+In SQL, filtering numeric and date and time data often involves operators. You can use the following operators in your filters to make sure you return only the rows you need:
+
+operator
+
+use
+
+<
+
+less than
+
+>
+
+greater than
+
+=
+
+equal to
+
+<=
+
+less than or equal to
+
+>=
+
+greater than or equal to
+
+<>
+
+not equal to
+
+Note: You can also use != as an alternative operator for not equal to.
 
 
 
