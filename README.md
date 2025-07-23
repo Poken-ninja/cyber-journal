@@ -3589,6 +3589,380 @@ Root user (or superuser): A user with elevated privileges to modify the system
 Standard input: Information received by the OS via the command line
 
 Standard output: Information returned by the OS through the shell
+---------
+SQL filtering versus Linux filtering
+In this reading, you'll explore the differences between the two tools as they relate to filtering. You'll also learn that one way to access SQL is through the Linux command line.
+
+Accessing SQL
+There are many interfaces for accessing SQL and many different versions of SQL. One way to access SQL is through the Linux command line.
+
+To access SQL from Linux, you need to type in a command for the version of SQL that you want to use. For example, if you want to access SQLite, you can enter the command sqlite3 in the command line.
+
+After this, any commands typed in the command line will be directed to SQL instead of Linux commands.
+
+Differences between Linux and SQL filtering 
+Although both Linux and SQL allow you to filter through data, there are some differences that affect which one you should choose.
+
+Purpose
+Linux filters data in the context of files and directories on a computer system. It’s used for tasks like searching for specific files, manipulating file permissions, or managing processes. 
+
+SQL is used to filter data within a database management system. It’s used for querying and manipulating data stored in tables and retrieving specific information based on defined criteria. 
+
+Syntax
+Linux uses various commands and command-line options specific to each filtering tool. Syntax varies depending on the tool and purpose. Some examples of Linux commands are find, sed, cut, e grep
+
+SQL uses the Structured Query Language (SQL), a standardized language with specific keywords and clauses for filtering data across different SQL databases. Some examples of SQL keywords and clauses are WHERE, SELECT, JOIN
+
+Structure
+SQL offers a lot more structure than Linux, which is more free-form and not as tidy.
+
+For example, if you wanted to access a log of employee log-in attempts, SQL would have each record separated into columns. Linux would print the data as a line of text without this organization. As a result, selecting a specific column to analyze would be easier and more efficient in SQL.
+
+In terms of structure, SQL provides results that are more easily readable and that can be adjusted more quickly than when using Linux.
+
+Joining tables
+Some security-related decisions require information from different tables. SQL allows the analyst to join multiple tables together when returning data. Linux doesn’t have that same functionality; it doesn’t allow data to be connected to other information on your computer. This is more restrictive for an analyst going through security logs.
+
+Best uses
+As a security analyst, it’s important to understand when you can use which tool. Although SQL has a more organized structure and allows you to join tables, this doesn’t mean that there aren’t situations that would require you to filter data in Linux.
+
+A lot of data used in cybersecurity will be stored in a database format that works with SQL. However, other logs might be in a format that is not compatible with SQL. For instance, if the data is stored in a text file, you cannot search through it with SQL. In those cases, it is useful to know how to filter in Linux. 
+---------
+Query a database
+In this reading, you’ll review those basic SQL queries and learn a new keyword that will help you organize your output. You'll also learn about the Chinook database, which this course uses for queries in readings and quizzes.
+
+Basic SQL query
+There are two essential keywords in any SQL query: SELECT and FROM. You will use these keywords every time you want to query a SQL database. Using them together helps SQL identify what data you need from a database and the table you are returning it from.
+
+The video demonstrated this SQL query:
+
+SELECT employee_id, device_id
+
+FROM employees;
+
+In readings and quizzes, this course uses a sample database called the Chinook database to run queries. The Chinook database includes data that might be created at a digital media company. A security analyst employed by this company might need to query this data.  For example, the database contains eleven tables, including an employees table, a customers table, and an invoices table. These tables include data such as names and addresses.  
+
+As an example, you can run this query to return data from the customers table of the Chinook database:
+
+
+SELECT customerid, city, country
+FROM customers;
+The WHERE clause and basic operators
+Previously, you focused on how to refine your SQL queries by using the WHERE clause to filter results. In this reading, you’ll further explore how to use the WHERE clause, the LIKE operator and the percentage sign (%) wildcard. You’ll also be introduced to the underscore (_), another wildcard that can help you filter queries.
+
+How filtering helps
+As a security analyst, you'll often be responsible for working with very large and complicated security logs. To find the information you need, you'll often need to use SQL to filter the logs.
+
+In a cybersecurity context, you might use filters to find the login attempts of a specific user or all login attempts made at the time of a security issue. As another example, you might filter to find the devices that are running a specific version of an application.
+
+WHERE 
+To create a filter in SQL, you need to use the keyword WHERE. WHERE indicates the condition for a filter.
+
+If you needed to email employees with a title of IT Staff, you might use a query like the one in the following example. You can run this example to examine what it returns: 
+
+123
+SELECT firstname, lastname, title, email
+FROM employees
+WHERE title = 'IT Staff';
+Reset
++-----------+----------+----------+------------------------+
+| FirstName | LastName | Title    | Email                  |
++-----------+----------+----------+------------------------+
+| Robert    | King     | IT Staff | robert@chinookcorp.com |
+| Laura     | Callahan | IT Staff | laura@chinookcorp.com  |
++-----------+----------+----------+------------------------+
+Rather than returning all records in the employees table, this WHERE clause instructs SQL to return only those that contain 'IT Staff' in the title column. It uses the equals sign (=) operator to set this condition.
+
+Note: You should place the semicolon (;) where the query ends. When you add a filter to a basic query, the semicolon is after the filter. 
+
+Filtering for patterns
+You can also filter based on a pattern. For example, you can identify entries that start or end with a certain character or characters. Filtering for a pattern requires incorporating two more elements into your WHERE clause:
+
+a wildcard 
+
+the LIKE operator
+
+Wildcards
+A wildcard is a special character that can be substituted with any other character. Two of the most useful wildcards are the percentage sign (%) and the underscore (_):
+
+The percentage sign substitutes for any number of other characters. 
+
+The underscore symbol only substitutes for one other character.
+
+These wildcards can be placed after a string, before a string, or in both locations depending on the pattern you’re filtering for.
+
+The following table includes these wildcards applied to the string 'a' and examples of what each pattern would return.
+
+Pattern
+
+Results that could be returned
+
+'a%'
+
+apple123, art, a
+
+'a_'
+
+as, an, a7
+
+'a__' 
+
+ant, add, a1c
+
+'%a'
+
+pizza, Z6ra, a
+
+'_a'
+
+ma, 1a, Ha
+
+'%a%'
+
+Again, back, a
+
+'_a_'
+
+Car, ban, ea7
+
+LIKE
+To apply wildcards to the filter, you need to use the LIKE operator instead of an equals sign (=). LIKE is used with WHERE to search for a pattern in a column. 
+
+For instance, if you want to email employees with a title of either 'IT Staff' or 'IT Manager', you can use LIKE operator combined with the % wildcard:  
+
+123
+SELECT lastname, firstname, title, email
+FROM employees
+WHERE title LIKE 'IT%';
+Reset
++----------+-----------+------------+-------------------------+
+| LastName | FirstName | Title      | Email                   |
++----------+-----------+------------+-------------------------+
+| Mitchell | Michael   | IT Manager | michael@chinookcorp.com |
+| King     | Robert    | IT Staff   | robert@chinookcorp.com  |
+| Callahan | Laura     | IT Staff   | laura@chinookcorp.com   |
++----------+-----------+------------+-------------------------+
+This query returns all records with values in the title column that start with the pattern of 'IT'. This means both 'IT Staff' and 'IT Manager' are returned.
+
+As another example, if you want to search through the invoices table to find all customers located in states with an abbreviation of 'NY', 'NV', 'NS' or 'NT', you can use the 'N_' pattern on the state column:
+
+123
+SELECT firstname,lastname, state, country
+FROM customers
+WHERE state LIKE 'N_';
+Reset
++-----------+----------+-------+---------+
+| FirstName | LastName | State | Country |
++-----------+----------+-------+---------+
+| Michelle  | Brooks   | NY    | USA     |
+| Kathy     | Chase    | NV    | USA     |
+| Martha    | Silk     | NS    | Canada  |
+| Ellie     | Sullivan | NT    | Canada  |
++-----------+----------+-------+---------+
+This returns all the records with state abbreviations that follow this pattern.
++------------+---------------------+----------------+
+| CustomerId | City                | Country        |
++------------+---------------------+----------------+
+|          1 | São José dos Campos | Brazil         |
+|          2 | Stuttgart           | Germany        |
+|          3 | Montréal            | Canada         |
+|          4 | Oslo                | Norway         |
+|          5 | Prague              | Czech Republic |
+|          6 | Prague              | Czech Republic |
+|          7 | Vienne              | Austria        |
+|          8 | Brussels            | Belgium        |
+|          9 | Copenhagen          | Denmark        |
+|         10 | São Paulo           | Brazil         |
+|         11 | São Paulo           | Brazil         |
+|         12 | Rio de Janeiro      | Brazil         |
+|         13 | Brasília            | Brazil         |
+|         14 | Edmonton            | Canada         |
+|         15 | Vancouver           | Canada         |
+|         16 | Mountain View       | USA            |
+|         17 | Redmond             | USA            |
+|         18 | New York            | USA            |
+|         19 | Cupertino           | USA            |
+|         20 | Mountain View       | USA            |
+|         21 | Reno                | USA            |
+|         22 | Orlando             | USA            |
+|         23 | Boston              | USA            |
+|         24 | Chicago             | USA            |
+|         25 | Madison             | USA            |
++------------+---------------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+SELECT
+The SELECT keyword indicates which columns to return. For example, you can return the customerid column from the Chinook database with
+
+SELECT customerid
+
+You can also select multiple columns by separating them with a comma. For example, if you want to return both the customerid and city columns, you should write SELECT customerid, city.
+
+If you want to return all columns in a table, you can follow the SELECT keyword with an asterisk (*). The first line in the query will be SELECT *.
+
+Note: Although the tables you're querying in this course are relatively small, using SELECT * may not be advisable when working with large databases and tables; in those cases, the final output may be difficult to understand and might be slow to run. 
+
+FROM
+The SELECT keyword always comes with the FROM keyword. FROM indicates which table to query. To use the FROM keyword, you should write it after the SELECT keyword, often on a new line, and follow it with the name of the table you’re querying. If you want to return all columns from the customers table, you can write:
+
+SELECT *
+
+FROM customers;
+
+When you want to end the query here, you put a semicolon (;) at the end to tell SQL that this is the entire query.
+
+Note: Line breaks are not necessary in SQL queries, but are often used to make the query easier to understand. If you prefer, you can also write the previous query on one line as
+
+SELECT * FROM customers;
+
+ORDER BY
+Database tables are often very complicated, and this is where other SQL keywords come in handy. ORDER BY is an important keyword for organizing the data you extract from a table.
+
+ORDER BY sequences the records returned by a query based on a specified column or columns. This can be in either ascending or descending order.
+
+Sorting in ascending order
+To use the ORDER BY keyword, write it at the end of the query and specify a column to base the sort on. In this example, SQL will return the customerid, city, and country columns from the customers table, and the records will be sequenced by the city column:
+
+123
+SELECT customerid, city, country
+FROM customers
+ORDER BY city;
+Reset
++------------+--------------+----------------+
+| CustomerId | City         | Country        |
++------------+--------------+----------------+
+|         48 | Amsterdam    | Netherlands    |
+|         59 | Bangalore    | India          |
+|         36 | Berlin       | Germany        |
+|         38 | Berlin       | Germany        |
+|         42 | Bordeaux     | France         |
+|         23 | Boston       | USA            |
+|         13 | Brasília     | Brazil         |
+|          8 | Brussels     | Belgium        |
+|         45 | Budapest     | Hungary        |
+|         56 | Buenos Aires | Argentina      |
+|         24 | Chicago      | USA            |
+|          9 | Copenhagen   | Denmark        |
+|         19 | Cupertino    | USA            |
+|         58 | Delhi        | India          |
+|         43 | Dijon        | France         |
+|         46 | Dublin       | Ireland        |
+|         54 | Edinburgh    | United Kingdom |
+|         14 | Edmonton     | Canada         |
+|         26 | Fort Worth   | USA            |
+|         37 | Frankfurt    | Germany        |
+|         31 | Halifax      | Canada         |
+|         44 | Helsinki     | Finland        |
+|         34 | Lisbon       | Portugal       |
+|         52 | London       | United Kingdom |
+|         53 | London       | United Kingdom |
++------------+--------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+The ORDER BY keyword sorts the records based on the column specified after this keyword. By default, as shown in this example, the sequence will be in ascending order. This means
+
+if you choose a column containing numeric data, it sorts the output from the smallest to largest. For example, if sorting on customerid, the ID numbers are sorted from smallest to largest.
+
+if the column contains alphabetic characters, such as in the example with the city column, it orders the records from the beginning of the alphabet to the end. 
+
+Sorting in descending order
+You can also use the ORDER BY with the DESC keyword to sort in descending order. The DESC keyword is short for "descending" and tells SQL to sort numbers from largest to smallest, or alphabetically from Z to A. This can be done by following ORDER BY with the DESC keyword. For example, you can run this query to examine how the results differ when DESC is applied: 
+
+123
+SELECT customerid, city, country
+FROM customers
+ORDER BY city DESC;
+Reset
++------------+---------------------+----------------+
+| CustomerId | City                | Country        |
++------------+---------------------+----------------+
+|         33 | Yellowknife         | Canada         |
+|         32 | Winnipeg            | Canada         |
+|         49 | Warsaw              | Poland         |
+|          7 | Vienne              | Austria        |
+|         15 | Vancouver           | Canada         |
+|         27 | Tucson              | USA            |
+|         29 | Toronto             | Canada         |
+|         10 | São Paulo           | Brazil         |
+|         11 | São Paulo           | Brazil         |
+|          1 | São José dos Campos | Brazil         |
+|          2 | Stuttgart           | Germany        |
+|         51 | Stockholm           | Sweden         |
+|         55 | Sidney              | Australia      |
+|         57 | Santiago            | Chile          |
+|         28 | Salt Lake City      | USA            |
+|         47 | Rome                | Italy          |
+|         12 | Rio de Janeiro      | Brazil         |
+|         21 | Reno                | USA            |
+|         17 | Redmond             | USA            |
+|          5 | Prague              | Czech Republic |
+|          6 | Prague              | Czech Republic |
+|         35 | Porto               | Portugal       |
+|         39 | Paris               | France         |
+|         40 | Paris               | France         |
+|         30 | Ottawa              | Canada         |
++------------+---------------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+Now, cities at the end of the alphabet are listed first.
+
+Sorting based on multiple columns
+You can also choose multiple columns to order by. For example, you might first choose the country and then the city column. SQL then sorts the output by country, and for rows with the same country, it sorts them based on city. You can run this to explore how SQL displays this:
+
+123
+SELECT customerid, city, country
+FROM customers
+ORDER BY country, city;
+Reset
++------------+---------------------+----------------+
+| CustomerId | City                | Country        |
++------------+---------------------+----------------+
+|         56 | Buenos Aires        | Argentina      |
+|         55 | Sidney              | Australia      |
+|          7 | Vienne              | Austria        |
+|          8 | Brussels            | Belgium        |
+|         13 | Brasília            | Brazil         |
+|         12 | Rio de Janeiro      | Brazil         |
+|          1 | São José dos Campos | Brazil         |
+|         10 | São Paulo           | Brazil         |
+|         11 | São Paulo           | Brazil         |
+|         14 | Edmonton            | Canada         |
+|         31 | Halifax             | Canada         |
+|          3 | Montréal            | Canada         |
+|         30 | Ottawa              | Canada         |
+|         29 | Toronto             | Canada         |
+|         15 | Vancouver           | Canada         |
+|         32 | Winnipeg            | Canada         |
+|         33 | Yellowknife         | Canada         |
+|         57 | Santiago            | Chile          |
+|          5 | Prague              | Czech Republic |
+|          6 | Prague              | Czech Republic |
+|          9 | Copenhagen          | Denmark        |
+|         44 | Helsinki            | Finland        |
+|         42 | Bordeaux            | France         |
+|         43 | Dijon               | France         |
+|         41 | Lyon                | France         |
++------------+---------------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+Key takeaways
+SELECT and FROM are important keywords in SQL queries. You use SELECT to indicate which columns to return and FROM to indicate which table to query. You can also include ORDER BY in your query to organize the output. These foundational SQL skills will support you as you move into more advanced queries. 
+
+------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
