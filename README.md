@@ -5,6 +5,48 @@
 | **3. Internships & Certs** (7–10 months) | Get recognized by recruiters        | Finish Security+, earn Google/Coursera badges, start internships (virtual/real) |
 | **4. Interview Prep** (10–14 months)     | Crack technical & behavioral rounds | Practice system design, whiteboard, and behavioral questions daily              |
 
+---
+
+**CVE LIST**
+
+---
+
+Becoming a penetration tester
+Penetration testers are in-demand in the fast growing field of cybersecurity. All of the skills you’re learning in this program can help you advance towards a career in pen testing:
+
+Network and application security
+
+Experience with operating systems, like Linux
+
+Vulnerability analysis and threat modeling
+
+Detection and response tools
+
+Programming languages, like Python and BASH
+
+Communication skills
+
+---
+
+Tools of the trade
+There are so many combinations that can be used to create a single set of login credentials. The number of characters, letters, and numbers that can be mixed together is truly incredible. When done manually, it could take someone years to try every possible combination.
+
+Instead of dedicating the time to do this, attackers often use software to do the guess work for them. These are some common brute forcing tools:
+
+Aircrack-ng
+
+Hashcat 
+
+John the Ripper
+
+Ophcrack
+
+THC Hydra
+
+Sometimes, security professionals use these tools to test and analyze their own systems. They each serve different purposes. For example, you might use Aircrack-ng to test a Wi-Fi network for vulnerabilities to brute force attack.
+
+---
+
 # cyber-journal
 Weekly cybersecurity learning journal
 
@@ -4413,6 +4455,779 @@ Single Sign-On (SSO): A technology that combines several different logins into o
 Symmetric encryption: The use of a single secret key to exchange information
 
 User provisioning: The process of creating and maintaining a user's digital identity
+--------------
+⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°
+
+Vulnerabilities of CI/CD
+Protect Your Software Pipeline: CI/CD Security
+
+Building upon your understanding of vulnerability management, this reading focuses on a critical area of modern software development: CI/CD pipelines. Just as organizations regularly assess their systems for weaknesses, CI/CD pipelines, which automate the software release process, also require rigorous vulnerability management. This reading will explore the specific vulnerabilities within CI/CD pipelines and how to apply vulnerability management principles to secure them, ensuring a robust and safe software delivery process.
+
+Continuous Integration, Continuous Delivery, and Continuous Deployment (CI/CD) pipelines are essential for modern software development. They help teams deliver software faster and more efficiently. But, like any powerful tool, CI/CD pipelines can also introduce security risks if not properly managed.
+
+In this guide, you’ll explore common vulnerabilities in CI/CD pipelines. You’ll learn why securing these pipelines is crucial and how to integrate security practices to build a robust and secure software development process. By understanding these vulnerabilities and implementing best practices, you can transform your CI/CD pipeline into a key component of your cybersecurity strategy.
+
+What is CI/CD and Why Does it Matter?
+CI/CD automates the entire software release process, from code creation to deployment. This automation is what enables modern development teams to be agile and respond quickly to user needs. Let's break down the key parts:
+
+Continuous Integration (CI): Building a Solid Foundation
+Continuous Integration (CI) is all about frequently merging code changes from different developers into a central location. This triggers automated processes like building the software and running tests. CI catches problems through an automated process: every time code is integrated, the system automatically builds and tests it. This immediate feedback loop reveals integration problems as soon as they occur. CI helps catch integration problems early, leading to higher quality code. Think of it as the foundation of the pipeline.
+
+Continuous Delivery (CD): Ready to Release
+Continuous Delivery means your code is always ready to be released to users. After passing automated tests, code is automatically deployed to a staging environment (a practice environment) or prepared for final release. Typically, a manual approval step is still needed before going live to production, which provides a control point.
+
+Continuous Deployment (CD): Fully Automated Releases
+Continuous Deployment automates the entire release process. Changes that pass all automated checks are automatically deployed directly to the live production environment, with no manual approval. This is all about speed and efficiency.
+
+Diagram illustrating a three-stage CI/CD pipeline, flowing from left to right.]
+Security Benefits of Continuous Delivery and Deployment
+You might be wondering how security fits into all this automation. The good news is that Continuous Delivery and Deployment can actually enhance security. CD allows you to build security checks right into your deployment pipeline. This ensures that only thoroughly vetted software versions are released.
+
+These automated security checks can include:
+
+Dynamic Application Security Testing (DAST): Automated tests that find vulnerabilities in running applications in realistic staging environments.
+
+Security Compliance Checks: Automated checks that ensure software meets your organization’s security rules and policies.
+
+Infrastructure Security Validations: Checks that make sure the systems hosting your software are secure.
+
+Why a secure CI/CD Pipelines is Non-Negotiable
+To grasp the power of CI/CD is vital.  Pipeline protection is not optional; it is essential. Consider these points:
+
+Secure Automation: CI/CD automates repetitive tasks: building, testing, deploying. When automation is implemented securely, this reduces errors from manual work, speeds processes, and importantly, reduces human errors that create vulnerabilities. However, insecure automation automates the introduction of vulnerabilities at scale.
+
+Improved Code Quality Via Security Checks: Automated tests in CI/CD rigorously check code before release. Crucially, this includes automated security tests. This leads to fewer bugs and security weaknesses in final software, but only if security tests integrate effectively within the pipeline.
+
+Faster Time to Market for Security Updates: CI/CD accelerates releases. This enables faster delivery of new features, bug fixes, and security updates, improving response time to both user needs and security threats. This rapid deployment of security updates is a significant security advantage of a well-secured CI/CD pipeline.
+
+Enhanced Collaboration and Feedback with Safety Focus: CI/CD encourages collaboration between development, security, testing, and operations teams. Quick feedback loops aid identification and resolution of vulnerabilities early in development. This collaborative environment is essential to build security into the pipeline and address vulnerabilities proactively.
+
+Reduced Risk: Frequent, smaller releases, a result of CI/CD, are less risky than large, infrequent releases. If issues arise (including security issues), pinpointing and fixing the problem becomes easier. This also applies to security vulnerabilities; smaller, frequent releases limit the potential impact of a security flaw introduced in any single release, provided security monitoring and testing remain continuous.
+
+In essence, CI/CD is the engine of modern agile software development. It allows for reliable, efficient, and responsive software delivery. However, an unsecured CI/CD pipeline can become a major entry point for vulnerabilities.
+
+Common CI/CD Pipeline Vulnerabilities: What to Watch Out For
+Knowing the benefits of CI/CD is only half the battle. You also need to understand the potential security weaknesses. Here are some common vulnerabilities to be aware of:
+
+Insecure Dependencies: Risks from Third-Party Code
+CI/CD pipelines often use many third-party libraries and components. If these components have known vulnerabilities (Common Vulnerabilities and Exposures, or CVEs), those vulnerabilities can be unknowingly added to your application during the automated build process.
+
+Action Step: Regularly scan and update your dependencies. Make sure you’re using secure versions of all external components.
+
+Misconfigured Permissions: Controlling Access
+Weak access controls in CI/CD tools, code repositories, and related systems are a significant vulnerability. Unauthorized access can allow attackers to modify code, pipeline configurations, or inject malicious content.
+
+Action Step: Implement strong access management using Role-Based Access Control (RBAC). Ensure only authorized individuals can access and change critical pipeline elements.
+
+Lack of Automated Security Testing: Missing Critical Checks
+Failing to include automated security testing in your CI/CD pipeline is a serious error. Without tools like SAST and DAST, you are almost guaranteed to release software full of vulnerabilities that will go undetected until after it's live, leading to significantly higher costs and effort to fix..
+
+Action Step: Integrate automated security testing (SAST and DAST) into your CI/CD pipeline. This should be a core part of your secure CI/CD strategy.
+
+Exposed Secrets: Protecting Sensitive Information
+Hardcoding sensitive data like API keys, passwords, and tokens directly into code or pipeline settings is a serious security mistake. If exposed, these secrets can lead to major security breaches.
+
+Action Step: Never hardcode secrets. Use secure vaults or dedicated secrets management tools to store and manage sensitive information. Enforce this practice across your team.
+
+Unsecured Build Environments: Protecting the Pipeline Infrastructure
+The CI/CD environment itself (the servers and systems that run your pipeline) needs to be secure. If this environment is vulnerable, attackers can compromise it to alter builds, inject malicious code, or steal sensitive data.
+
+Action Step: Harden your build environments. Use secure containers or virtual machines to minimize the risk of a compromised pipeline.
+
+Building a Secure CI/CD Pipeline: Defense in Depth
+To proactively address these vulnerabilities, a layered security approach is key. Here are essential best practices for your CI/CD security strategy:
+
+Integrate Security from the Start: Embrace DevSecOps: Adopt a DevSecOps mindset. This means building security into every stage of development, from planning to deployment and beyond. This naturally includes embedding security checks into your CI/CD pipeline.
+
+Implement Strong Access Controls: Use strict permission policies based on the principle of least privilege. Only grant necessary access to code, pipeline settings, and deployment configurations. Use tools like Multi-Factor Authentication (MFA) and Role-Based Access Control (RBAC) to secure your CI/CD environment.
+
+Automate Security Testing Everywhere: Make automated security scans and tests a fundamental part of your build and deployment process. Tools like SAST, Software Composition Analysis (SCA), and DAST are not optional extras – they are essential for a secure CI/CD pipeline so you can catch vulnerabilities early.
+
+Keep Dependencies Updated: Maintain a current inventory of all third-party dependencies, libraries, and CI/CD plugins. Regularly update these components to patch security vulnerabilities (CVEs). Tools like 
+Dependabot
+ and 
+Snyk
+ can automate dependency management.
+
+Secure Secrets Management: Never hardcode sensitive information in your code or pipeline configurations. Require the use of dedicated secrets management tools like HashiCorp Vault or AWS Secrets Manager. Securely store, access, and rotate secrets throughout the CI/CD process.
+
+Conclusion: Secure CI/CD – Secure Software
+By proactively addressing these common vulnerabilities and implementing security best practices in your CI/CD pipeline, your software teams can build and release applications with a significantly stronger security posture. A secure CI/CD foundation is crucial for minimizing security risks and building a more resilient overall security strategy for your applications and infrastructure.
+
+Key takeaways
+The essence of securing your CI/CD pipeline is to bring robust security to your software release process, enabling engineers to develop, test, and deploy code with confidence and resilience against threats. By building security into your CI/CD, you empower your team to release features, improvements, and critical security updates rapidly and reliably, ensuring software is not only delivered efficiently but also with the highest level of security, proactively protecting your organization and your customers.
+⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°✩⋆｡°
+
+----------------
+The OWASP Top 10
+To prepare for future risks, security professionals need to stay informed. Previously, you learned about the CVE® list, an openly accessible dictionary of known vulnerabilities and exposures.  The CVE® list is an important source of information that the global security community uses to share information with each other.
+
+In this reading, you’ll learn about another important resource that security professionals reference, the Open Web Application Security Project, recently renamed Open Worldwide Application Security Project® (OWASP). You’ll learn about OWASP’s role in the global security community and how companies use this resource to focus their efforts.
+
+What is OWASP?
+OWASP is a nonprofit foundation that works to improve the security of software. OWASP is an open platform that security professionals from around the world use to share information, tools, and events that are focused on securing the web.
+
+The OWASP Top 10
+One of OWASP’s most valuable resources is the OWASP Top 10. The organization has published this list since 2003 as a way to spread awareness of the web’s most targeted vulnerabilities. The Top 10 mainly applies to new or custom made software. Many of the world's largest organizations reference the OWASP Top 10 during application development to help ensure their programs address common security mistakes.
+
+Pro tip: OWASP’s Top 10 is updated every few years as technologies evolve. Rankings are based on how often the vulnerabilities are discovered and the level of risk they present.
+
+Note: Auditors also use the OWASP Top 10 as one point of reference when checking for regulatory compliance.
+
+Common vulnerabilities
+Businesses often make critical security decisions based on the vulnerabilities listed in the OWASP Top 10. This resource influences how businesses design new software that will be on their network, unlike the CVE® list, which helps them identify improvements to existing programs. These are the most regularly listed vulnerabilities that appear in their rankings to know about:
+
+Broken access control
+Access controls limit what users can do in a web application. For example, a blog might allow visitors to post comments on a recent article but restricts them from deleting the article entirely. Failures in these mechanisms can lead to unauthorized information disclosure, modification, or destruction. They can also give someone unauthorized access to other business applications.
+
+Cryptographic failures
+Information is one of the most important assets businesses need to protect. Privacy laws such as General Data Protection Regulation (GDPR) require sensitive data to be protected by effective encryption methods. Vulnerabilities can occur when businesses fail to encrypt things like personally identifiable information (PII). For example, if a web application uses a weak hashing algorithm, like MD5, it’s more at risk of suffering a data breach.
+
+Injection
+Injection occurs when malicious code is inserted into a vulnerable application. Although the app appears to work normally, it does things that it wasn’t intended to do. Injection attacks can give threat actors a backdoor into an organization’s information system. A common target is a website’s login form. When these forms are vulnerable to injection, attackers can insert malicious code that gives them access to modify or steal user credentials. 
+
+Insecure design
+Applications should be designed in such a way that makes them resilient to attack. When they aren’t, they’re much more vulnerable to threats like injection attacks or malware infections. Insecure design refers to a wide range of missing or poorly implemented security controls that should have been programmed into an application when it was being developed.
+
+Security misconfiguration
+Misconfigurations occur when security settings aren’t properly set or maintained. Companies use a variety of different interconnected systems. Mistakes often happen when those systems aren’t properly set up or audited. A common example is when businesses deploy equipment, like a network server, using default settings. This can lead businesses to use settings that fail to address the organization's security objectives.
+
+Vulnerable and outdated components
+Vulnerable and outdated components is a category that mainly relates to application development. Instead of coding everything from scratch, most developers use open-source libraries to complete their projects faster and easier. This publicly available software is maintained by communities of programmers on a volunteer basis. Applications that use vulnerable components that have not been maintained are at greater risk of being exploited by threat actors.
+
+Identification and authentication failures
+Identification is the keyword in this vulnerability category. When applications fail to recognize who should have access and what they’re authorized to do, it can lead to serious problems. For example, a home Wi-Fi router normally uses a simple login form to keep unwanted guests off the network. If this defense fails, an attacker can invade the homeowner’s privacy.
+
+Software and data integrity failures
+Software and data integrity failures are instances when updates or patches are inadequately reviewed before implementation. Attackers might exploit these weaknesses to deliver malicious software. When that occurs, there can be serious downstream effects. Third parties are likely to become infected if a single system is compromised, an event known as a supply chain attack.
+
+A famous example of a supply chain attack is the 
+SolarWinds cyber attack (2020)
+ where hackers injected malicious code into software updates that the company unknowingly released to their customers.
+
+Security logging and monitoring failures
+In security, it’s important to be able to log and trace back events. Having a record of events like user login attempts is critical to finding and fixing problems. Sufficient monitoring and incident response is equally important.
+
+Server-side request forgery
+Companies have public and private information stored on web servers. When you use a hyperlink or click a button on a website, a request is sent to a server that should validate who you are, fetch the appropriate data, and then return it to you.
+
+A hacker using their victim's computer to steal data from a web server.
+Server-side request forgeries (SSRFs) are when attackers manipulate the normal operations of a server to read or update other resources on that server. These are possible when an application on the server is vulnerable. Malicious code can be carried by the vulnerable app to the host server that will fetch unauthorized data.
+----------------------------------------------------------------------
+
+---
+
+### 🔍 **OSINT (Open Source Intelligence) – Cybersecurity Summary**
+
+#### 📌 What is OSINT?
+
+* OSINT = Gathering and analyzing public info to create usable intelligence.
+* Used in cybersecurity to detect vulnerabilities, threats, and exposures.
+
+---
+
+#### 🔄 **Information vs Intelligence**
+
+* **Information** = Raw facts (e.g., a software update is released).
+* **Intelligence** = Analyzed info to support decisions (e.g., update may have a vulnerability, so delay rollout).
+
+---
+
+#### 💡 Why OSINT Matters
+
+* Enhances **decision-making**.
+* Helps identify:
+
+  * 🕵️‍♂️ Cyber attacks
+  * 📤 Data leaks
+  * 🧱 Defense gaps
+  * 🕳️ Hidden vulnerabilities
+
+---
+
+#### 🛡️ Real-World Example:
+
+> Security team finds a hacker forum post about a new software exploit → uses that info to **patch systems before an attack** happens.
+
+---
+
+#### 🧰 Common OSINT Tools:
+
+* 🔬 **VirusTotal** – Scan files/URLs for malware.
+* 🧠 **MITRE ATT\&CK** – Real-world attack techniques/tactics.
+* 🌐 **OSINT Framework** – Directory of tools by category.
+* 📧 **Have I Been Pwned** – Check if emails are in data breaches.
+
+---
+
+#### 📝 Key Takeaways:
+
+* OSINT = Critical for proactive cybersecurity.
+* Intelligence = 🔍 Information + Analysis.
+* Knowing **how and where to search** is a must-have skill.
+* Good OSINT = Faster, smarter, safer decision-making.
+
+---
+
+🔍 Vulnerability Scanning Approaches
+📌 What is a Vulnerability Scanner?
+A tool that automatically checks systems against known vulnerabilities and exposures.
+
+Scans for misconfigurations or code flaws across various layers of an organization's infrastructure.
+
+🎯 Attack Surface Layers Scanned
+Perimeter Layer – Firewalls, authentication gateways.
+
+Network Layer – Routers, switches, protocols.
+
+Endpoint Layer – Devices like laptops, desktops, servers.
+
+Application Layer – User-facing software.
+
+Data Layer – Stored, in-transit, and in-use data.
+
+✅ Types of Scanning Approaches
+1️⃣ External vs. Internal
+External Scan: From outside the network (e.g., attacker POV). Checks websites, firewalls, public ports.
+
+Internal Scan: From inside the network. Tests software/apps for internal misconfigurations.
+
+2️⃣ Authenticated vs. Unauthenticated
+Authenticated Scan: Uses real credentials (user/admin). Detects deep issues like privilege escalation.
+
+Unauthenticated Scan: No login. Simulates outsider attack. Checks for publicly accessible data or services.
+
+3️⃣ Limited vs. Comprehensive
+Limited Scan: Targets specific devices or services (e.g., firewall config).
+
+Comprehensive Scan: Scans entire network—OSes, databases, apps, devices, etc.
+
+🔍 Discovery Scanning (Prep Step)
+Done before other scans.
+
+Identifies live hosts, open ports, and services.
+
+⚠️ Important Notes
+Scanners are non-intrusive (don’t exploit vulnerabilities), but may occasionally crash unstable systems.
+
+Vulnerability scanners use updated databases to identify known issues.
+
+Scans help shape the organization’s security posture and compliance.
+
+👨‍💻 Analyst's Role:
+Run, analyze, and report scan results.
+
+Collaborate with security teams to implement remediation and patching.
+
+---
+
+Glossary terms from module 3
+Terms and definitions from Course 5, Module 3
+Advanced persistent threat (APT): An instance when a threat actor maintains unauthorized access to a system for an extended period of time 
+
+Attack surface: All the potential vulnerabilities that a threat actor could exploit
+
+Attack tree: A diagram that maps threats to assets
+
+Attack vector: The pathways attackers use to penetrate security defenses 
+
+Bug bounty: Programs that encourage freelance hackers to find and report vulnerabilities
+
+Common Vulnerabilities and Exposures (CVE®) list: An openly accessible dictionary of known vulnerabilities and exposures
+
+Common Vulnerability Scoring System (CVSS): A measurement system that scores the severity of a vulnerability
+
+CVE Numbering Authority (CNA): An organization that volunteers to analyze and distribute information on eligible CVEs
+
+Defense in depth: A layered approach to vulnerability management that reduces risk
+
+Exploit: A way of taking advantage of a vulnerability
+
+Exposure: A mistake that can be exploited by a threat
+
+Hacker: Any person who uses computers to gain access to computer systems, networks, or data
+
+MITRE: A collection of non-profit research and development centers
+
+Security hardening: The process of strengthening a system to reduce its vulnerability and attack surface
+
+Threat actor: Any person or group who presents a security risk
+
+Vulnerability: A weakness that can be exploited by a threat
+
+Vulnerability assessment: The internal review process of a company’s security systems
+
+Vulnerability management: The process of finding and patching vulnerabilities
+
+Vulnerability scanner: Software that automatically compares existing common vulnerabilities and exposures against the technologies on the network
+
+Zero-day: An exploit that was previously unknown
+
+---
+
+### 🔐 **PASTA Framework Explained (Cybersecurity Threat Modeling)**
+
+**PASTA** stands for **Process for Attack Simulation and Threat Analysis**.
+It's a **7-step risk-centric threat modeling framework** used to identify, prioritize, and mitigate threats to applications or systems.
+
+---
+
+### ✅ **The 7 Steps of the PASTA Framework**
+
+| Step  | Name                                        | Description                                                                                              |
+| ----- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **1** | **Define the Objectives (Business Impact)** | Understand the business context, goals, and what needs to be protected (e.g., user data, system uptime). |
+| **2** | **Define the Technical Scope**              | Identify the architecture, infrastructure, technologies, APIs, and data flows in the application/system. |
+| **3** | **Application Decomposition**               | Break down the app into modules, trust boundaries, components, and data flow diagrams.                   |
+| **4** | **Threat Analysis**                         | Identify threats based on threat intelligence, threat actors, and known vulnerabilities.                 |
+| **5** | **Vulnerability & Weakness Analysis**       | Find existing vulnerabilities (e.g., using CVEs, scans, pentests). Map these to potential threats.       |
+| **6** | **Attack Simulation**                       | Simulate how an attacker might exploit weaknesses—think like a hacker. Use tools or red teaming.         |
+| **7** | **Risk & Impact Analysis**                  | Analyze the **impact vs. likelihood**, prioritize risks, and recommend mitigations or controls.          |
+
+---
+
+### 🧠 **Why Use PASTA?**
+
+* Combines **business goals** with **security threats**
+* Helps in **prioritizing** security investments
+* Enables **realistic simulations** of attacks (vs. just listing threats)
+* Aligns security with **compliance and risk management**
+
+---
+
+### 🎯 Example Use Case
+
+**Scenario:** You’re developing a fintech app.
+Using PASTA, you’d:
+
+* Identify financial data as the key asset (Step 1)
+* Document tech stack, APIs, and cloud setup (Step 2)
+* Map out how users, payment gateways, and databases interact (Step 3)
+* Then analyze threats like credential stuffing, API abuse, or injection attacks (Steps 4–6)
+* Finally, you'd apply controls like rate-limiting, prepared statements, MFA, etc. (Step 7)
+
+---
+
+Here’s a **WhatsApp-friendly summary** of your reading on **Threat Modeling** with a focus on **PASTA** and related frameworks:
+
+---
+
+### 🔐 **Traits of an Effective Threat Model**
+
+📌 **Definition**:
+Threat modeling identifies **assets**, finds **vulnerabilities**, analyzes **threats**, and helps **reduce risks**.
+
+📌 **Importance**:
+
+* Helps secure applications before attackers exploit them.
+* Used in **vulnerability management**, **threat analysis**, and **incident response**.
+
+---
+
+### 📲 **Why Application Security Matters**
+
+* Apps (web/mobile) = core to business.
+* Apps process a **huge volume of sensitive data**.
+* Example: **Log4Shell (CVE-2021-44228)** — led to **remote code execution** if not patched.
+
+---
+
+### 🛡️ **Defending the Application Layer**
+
+✅ **Threat Modeling Cycle**:
+
+1. Define the scope
+2. Identify threats
+3. Characterize environment
+4. Analyze threats
+5. Mitigate risks
+6. Evaluate findings
+
+🕒 Should be done:
+
+* Before, during, and after development (i.e., across the **SDLC**).
+
+---
+
+### 📚 **Common Threat Modeling Frameworks**
+
+#### 1. **STRIDE** (by Microsoft)
+
+* Focuses on 6 threats:
+
+  * **S**poofing
+  * **T**ampering
+  * **R**epudiation
+  * **I**nformation Disclosure
+  * **D**enial of Service
+  * **E**levation of Privilege
+
+#### 2. **PASTA**
+
+> **P**rocess for **A**ttack **S**imulation and **T**hreat **A**nalysis
+
+* Developed by OWASP leaders + VerSprite
+* **Risk-centric** and **evidence-based**
+* 7-stage process
+* Uses real data like **vulnerability reports**
+* Focus: application + its **supporting environment**
+
+#### 3. **Trike**
+
+* **Security-centric** approach
+* Focus: **use cases**, **permissions**, and **privilege models**
+* Open source tool
+
+#### 4. **VAST**
+
+> **V**isual, **A**gile, and **S**imple **T**hreat modeling
+
+* Used in **ThreatModeler®** platform
+* Ideal for **automation + scaling** across organizations
+
+---
+
+### 🤝 **How to Participate in Threat Modeling**
+
+🔍 **Ask Key Questions**:
+
+1. What are we working on?
+2. What could go wrong?
+3. What are we doing about it?
+4. Did we cover everything?
+5. Did we do a good job?
+
+👨‍💻 Anyone can contribute – not just experts. Learn with **DFDs** (Data Flow Diagrams), **attack trees**, and teamwork.
+
+---
+
+Glossary terms from module 4
+Terms and definitions from Course 5, Module 4
+Angler phishing: A technique where attackers impersonate customer service representatives on social media 
+
+Advanced persistent threat (APT): Instances when a threat actor maintains unauthorized access to a system for an extended period of time 
+
+Adware: A type of legitimate software that is sometimes used to display digital advertisements in applications
+
+Attack tree: A diagram that maps threats to assets
+
+Baiting: A social engineering tactic that tempts people into compromising their security
+
+Botnet: A collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder"
+
+Cross-site scripting (XSS): An injection attack that inserts code into a vulnerable website or web application
+
+Cryptojacking: A form of malware that installs software to illegally mine cryptocurrencies 
+
+DOM-based XSS attack: An instance when malicious script exists in the webpage a browser loads
+
+Dropper: A type of malware that comes packed with malicious code which is delivered and installed onto a target system
+
+Fileless malware: Malware that does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer
+
+Hacker: Any person or group who uses computers to gain unauthorized access to data
+
+Identity and access management (IAM): A collection of processes and technologies that helps organizations manage digital identities in their environment 
+
+Injection attack: Malicious code inserted into a vulnerable application
+
+Input validation: Programming that validates inputs from users and other programs
+
+Intrusion detection system (IDS): An application that monitors system activity and alerts on possible intrusions
+
+Loader: A type of malware that downloads strains of malicious code from an external source and installs them onto a target system
+
+Malware: Software designed to harm devices or networks
+
+Process of Attack Simulation and Threat Analysis (PASTA): A popular threat modeling framework that’s used across many industries
+
+Phishing: The use of digital communications to trick people into revealing sensitive data or deploying malicious software
+
+Phishing kit: A collection of software tools needed to launch a phishing campaign
+
+Prepared statement: A coding technique that executes SQL statements before passing them onto the database 
+
+Potentially unwanted application (PUA): A type of unwanted software that is bundled in with legitimate programs which might display ads, cause device slowdown, or install other software
+
+Quid pro quo: A type of baiting used to trick someone into believing that they’ll be rewarded in return for sharing access, information, or money
+
+Ransomware: Type of malicious attack where attackers encrypt an organization’s data and demand payment to restore access
+
+Reflected XSS attack: An instance when malicious script is sent to a server and activated during the server’s response 
+
+Rootkit: Malware that provides remote, administrative access to a computer
+
+Scareware: Malware that employs tactics to frighten users into infecting their device
+
+Smishing: The use of text messages to trick users to obtain sensitive information or to impersonate a known source
+
+Social engineering: A manipulation technique that exploits human error to gain private information, access, or valuables
+
+Spear phishing: A malicious email attack targeting a specific user or group of users, appearing to originate from a trusted source
+
+Spyware: Malware that’s used to gather and sell information without consent
+
+SQL (Structured Query Language): A programming language used to create, interact with, and request information from a database
+
+SQL injection: An attack that executes unexpected queries on a database
+
+Stored XSS attack: An instance when malicious script is injected directly on the server
+
+Tailgating: A social engineering tactic in which unauthorized people follow an authorized person into a restricted area
+
+Threat: Any circumstance or event that can negatively impact assets
+
+Threat actor: Any person or group who presents a security risk
+
+Threat modeling: The process of identifying assets, their vulnerabilities, and how each is exposed to threats
+
+Trojan horse: Malware that looks like a legitimate file or program
+
+Vishing: The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source
+
+Watering hole attack: A type of attack when a threat actor compromises a website frequently visited by a specific group of users
+
+Whaling: A category of spear phishing attempts that are aimed at high-ranking executives in an organization
+
+Web-based exploits: Malicious code or behavior that’s used to take advantage of coding flaws in a web application
+
+---
+
+Glossary
+Cybersecurity
+
+Terms and definitions from Course 5
+A
+Access controls: Security controls that manage access, authorization, and
+accountability of information
+Adware: A type of legitimate software that is sometimes used to display digital
+advertisements in applications
+Advanced persistent threat (APT): An instance when a threat actor maintains
+unauthorized access to a system for an extended period of time
+Algorithm: A set of rules used to solve a problem
+Angler phishing: A technique where attackers impersonate customer service
+representatives on social media
+Application programming interface (API) token: A small block of encrypted code
+that contains information about a user
+Asset: An item perceived as having value to an organization
+Asset classification: The practice of labeling assets based on sensitivity and
+importance to an organization
+Asset inventory: A catalog of assets that need to be protected
+Asset management: The process of tracking assets and the risks that affect them
+Asymmetric encryption: The use of a public and private key pair for encryption and
+decryption of data
+Attack surface: The characteristics and features of the areas where an attack can
+come from
+
+Attack tree: A diagram that maps threats to assets
+Attack vector: The pathways attackers use to penetrate security defenses
+
+B
+Baiting: A social engineering tactic that tempts people into compromising their
+security
+Basic auth: The technology used to establish a user’s request to access a server
+Bit: The smallest unit of data measurement on a computer
+Botnet: A collection of computers infected by malware that are under the control of a
+single threat actor, known as the “bot-herder"
+Brute force attack: The trial and error process of discovering private information
+Bug bounty: Programs that encourage freelance hackers to find and report
+vulnerabilities
+C
+Cipher: An algorithm that encrypts information
+Common Vulnerabilities and Exposures (CVE®) list: An openly accessible dictionary
+of known vulnerabilities and exposures
+Common Vulnerability Scoring System (CVSS): A measurement system that scores
+the severity of a vulnerability
+Compliance: The process of adhering to internal standards and external regulations
+Computer virus: see “virus”
+Cross-site scripting (XSS): An injection attack that inserts code into a vulnerable
+website or web application
+Cryptojacking: A form of malware that installs software to illegally mine
+cryptocurrencies
+
+Cryptographic key: A mechanism that decrypts ciphertext
+Cryptography: The process of transforming information into a form that unintended
+readers can’t understand
+CVE Numbering Authority (CNA): An organization that volunteers to analyze and
+distribute information on eligible CVEs
+
+D
+Data: Information that is translated, processed, or stored by a computer
+Data at rest: Data not currently being accessed
+Data in transit: Data traveling from one point to another
+Data in use: Data being accessed by one or more users
+Data custodian: Anyone or anything that’s responsible for the safe handling, transport,
+and storage of information
+Data owner: The person that decides who can access, edit, use, or destroy their
+information
+Defense in depth: A layered approach to vulnerability management that reduces risk
+Digital certificate: A file that verifies the identity of a public key holder
+DOM-based XSS attack: An instance when malicious script exists in the webpage a
+browser loads
+Dropper: A type of malware that comes packed with malicious code which is delivered
+and installed onto a target system
+E
+Encryption: The process of converting data from a readable format to an encoded
+format
+Exploit: A way of taking advantage of a vulnerability
+
+Exposure: A mistake that can be exploited by a threat
+F
+Fileless malware: Malware that does not need to be installed by the user because it
+uses legitimate programs that are already installed to infect a computer
+H
+Hacker: Any person who uses computers to gain access to computer systems,
+networks, or data
+Hash collision: An instance when different inputs produce the same hash value
+Hash function: An algorithm that produces a code that can’t be decrypted
+Hash table: A data structure that's used to store and reference hash values
+I
+Identity and access management (IAM): A collection of processes and technologies
+that helps organizations manage digital identities in their environment
+Information privacy: The protection of unauthorized access and distribution of data
+Information security (InfoSec): The practice of keeping data in all states away from
+unauthorized users
+Injection attack: Malicious code inserted into a vulnerable application
+Input validation: Programming that validates inputs from users and other programs
+Intrusion detection system (IDS): An application that monitors system activity and
+alerts on possible intrusions
+L
+Loader: A type of malware that downloads strains of malicious code from an external
+source and installs them onto a target system
+
+M
+Malware: Software designed to harm devices or networks
+MITRE: A collection of non-profit research and development centers
+Multi-factor authentication (MFA): A technology that requires at least two distinct
+forms of identification
+N
+National Institute of Standards and Technology (NIST) Cybersecurity Framework
+(CSF): A voluntary framework that consists of standards, guidelines, and best practices
+to manage cybersecurity risk
+Non-repudiation: The concept that the authenticity of information can’t be denied
+O
+OAuth: An open-standard authorization protocol that shares designated access
+between applications
+P
+Process of Attack Simulation and Threat Analysis (PASTA): A popular threat
+modeling framework that’s used across many industries
+Payment Card Industry Data Security Standards (PCI DSS): A set of security
+standards formed by major organizations in the financial industry
+Personally identifiable information (PII): Any information used to infer an individual's
+identity
+Phishing: The use of digital communications to trick people into revealing sensitive
+data or deploying malicious software
+Phishing kit: A collection of software tools needed to launch a phishing campaign
+Policy: A set of rules that reduce risk and protect information
+
+Potentially unwanted application (PUA): A type of unwanted software that is bundled
+in with legitimate programs which might display ads, cause device slowdown, or install
+other software
+Prepared statement: A coding technique that executes SQL statements before
+passing them onto the database
+Principle of least privilege: The concept of granting only the minimal access and
+authorization required to complete a task or function
+Procedures: Step-by-step instructions to perform a specific security task
+Protected health information (PHI): Information that relates to the past, present, or
+future physical or mental health or condition of an individual
+Public key infrastructure (PKI): An an encryption framework that secures the
+exchange of online information
+Q
+Quid pro quo: A type of baiting used to trick someone into believing that they’ll be
+rewarded in return for sharing access, information, or money
+R
+Rainbow table: A file of pre-generated hash values and their associated plaintext
+Ransomware: Type of malicious attack where attackers encrypt an organization’s data
+and demand payment to restore access
+Regulations: Rules set by a government or other authority to control the way
+something is done
+Reflected XSS attack: An instance when malicious script is sent to a server and
+activated during the server’s response
+Risk: Anything that can impact confidentiality, integrity, or availability of an asset
+Rootkit: Malware that provides remote, administrative access to a computer
+S
+
+Salting: An additional safeguard that’s used to strengthen hash functions
+Scareware: Malware that employs tactics to frighten users into infecting their device
+Security assessment: A check to determined how resilient current security
+implementations against threats
+Security audit: A review of an organization's security controls, policies, and
+procedures against a set of expectations
+Security controls: Safeguards designed to reduce specific security risks
+Security hardening: The process of strengthening a system to reduce its vulnerability
+and attack surface
+Separation of duties: The principle that users should not be given levels of
+authorization that would allow them to misuse a system
+Session: A sequence of network HTTP basic auth requests and responses associated
+with the same user
+Session cookie: A token that websites use to validate a session and determine how
+long that session should last
+Session hijacking: An event when attackers obtain a legitimate user’s session ID
+Session ID: A unique token that identifies a user and their device while accessing a
+system
+Single sign-on (SSO): A technology that combines several different logins into one
+Smishing: The use of text messages to trick users to obtain sensitive information or to
+impersonate a known source
+Social engineering: A manipulation technique that exploits human error to gain private
+information, access, or valuables
+Spear phishing: A malicious email attack targeting a specific user or group of users,
+appearing to originate from a trusted source
+Spyware: Malware that’s used to gather and sell information without consent
+SQL (Structured Query Language): A programming language used to create, interact
+with, and request information from a database
+
+SQL injection: An attack that executes unexpected queries on a database
+Standards: References that inform how to set policies
+Stored XSS attack: An instance when a malicious script is injected directly on the
+server
+SQL (Structured Query Language): A programming language used to create, interact
+with, and request information from a database
+Symmetric encryption: The use of a single secret key to exchange information
+T
+Tailgating: A social engineering tactic in which unauthorized people follow an
+authorized person into a restricted area
+Threat: Any circumstance or event that can negatively impact assets
+Threat actor: Any person or group who presents a security risk
+Threat modeling: The process of identifying assets, their vulnerabilities, and how each
+is exposed to threats
+Trojan horse: Malware that looks like a legitimate file or program
+U
+User provisioning: The process of creating and maintaining a user's digital identity
+V
+Virus: Malicious code written to interfere with computer operations and cause damage
+to data and software
+Vishing: The exploitation of electronic voice communication to obtain sensitive
+information or to impersonate a known source
+Vulnerability: A weakness that can be exploited by a threat
+
+Vulnerability scanner: Software that automatically compares existing common
+vulnerabilities and exposures against the technologies on the network
+Vulnerability assessment: The internal review process of a company’s security
+systems
+Vulnerability management: The process of finding and patching vulnerabilities
+W
+Watering hole attack: A type of attack when a threat actor compromises a website
+frequently visited by a specific group of users
+Whaling: A category of spear phishing attempts that are aimed at high-ranking
+executives in an organization
+Web-based exploits: Malicious code or behavior that’s used to take advantage of
+coding flaws in a web application
+Worm: Malware that can duplicate and spread itself across systems on its own
+Z
+Zero-day: An exploit that was previously unknown
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
