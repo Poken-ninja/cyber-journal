@@ -6,8 +6,559 @@
 | **4. Interview Prep** (10–14 months)     | Crack technical & behavioral rounds | Practice system design, whiteboard, and behavioral questions daily              |
 
 ---
+Python in cybersecurity
+In cybersecurity, Python is used especially for automation. Automation is the use of technology to reduce human and manual effort to perform common and repetitive tasks. These are some specific areas of cybersecurity in which Python might be used to automate specific tasks:
 
-**CVE LIST**
+Log analysis
+
+Malware analysis
+
+Access control list management
+
+Intrusion detection
+
+Compliance checks
+
+Network scanning
+The Python Standard Library
+The Python Standard Library is an extensive collection of Python code that often comes packaged with Python. It includes a variety of modules, each with pre-built code centered around a particular type of task. 
+
+For example, you were previously introduced to the following modules in the Python Standard Library:
+
+The re module, which provides functions used for searching for patterns in log files
+
+The csv module, which provides functions used when working with .csv files
+
+The glob and os modules, which provide functions used when interacting with the command line
+
+The time and datetime modules, which provide functions used when working with timestamps
+
+Another Python Standard Library module is statistics. The statistics module includes functions used when calculating statistics related to numeric data. For example, mean() is a function in the statistics module that takes numeric data as input and calculates its mean (or average). Additionally, median() is a function in the statistics module that takes numeric data as input and calculates its median (or middle value).
+
+---
+
+# Strings and the Security Analyst
+
+Working with **strings** is important in the cybersecurity profession. Strings represent ordered sequences of characters and are commonly used for storing **IP addresses, usernames, URLs, and employee IDs**.
+
+---
+
+## String Data in a Security Setting
+
+* Strings are used when the data **doesn’t need mathematical operations** (e.g., subtraction, division).
+* In cybersecurity, strings are used to represent:
+
+  * **IP addresses**
+  * **Usernames**
+  * **URLs**
+  * **Employee IDs**
+
+---
+
+## Indices and Bracket Notation
+
+Each character in a string has an **index** (position number).
+
+* **Bracket notation** lets you access characters or slices of a string.
+
+```python
+device_id = "h32rb17"
+
+print("h32rb17"[0])  # Access by index directly
+print(device_id[0])  # Access using variable
+```
+
+**Output:**
+
+```
+h
+h
+```
+
+### String Slicing
+
+```python
+print("h32rb17"[0:3])
+```
+
+**Output:**
+
+```
+h32
+```
+
+Note: The slice starts at index `0` and ends **one before** index `3`.
+
+---
+
+## String Functions
+
+### `str()`
+
+Converts other data types to strings.
+
+```python
+string_id = str(19329302)
+print(string_id)
+```
+
+**Output:**
+
+```
+19329302
+```
+
+---
+
+### `len()`
+
+Returns the number of elements (characters).
+
+```python
+device_id_length = len("h32rb17")
+
+if device_id_length == 7:
+    print("The device ID has 7 characters.")
+```
+
+**Output:**
+
+```
+The device ID has 7 characters.
+```
+
+---
+
+## String Methods
+
+### `.upper()` and `.lower()`
+
+```python
+print("Information Technology".upper())
+print("Information Technology".lower())
+```
+
+**Output:**
+
+```
+INFORMATION TECHNOLOGY
+information technology
+```
+
+---
+
+### `.index()`
+
+Finds the **first occurrence** of a character or substring.
+
+```python
+print("h32rb17".index("r"))
+```
+
+**Output:**
+
+```
+3
+```
+
+If the item is not found, Python raises an **error**:
+
+```python
+print("h32rb17".index("a"))
+```
+
+**Output:**
+
+```
+ValueError: substring not found
+```
+
+If multiple instances exist, only the first index is returned:
+
+```python
+print("r45rt46".index("r"))
+```
+
+**Output:**
+
+```
+0
+```
+
+---
+
+## Finding Substrings with `.index()`
+
+```python
+tshah_index = "tsnow,tshah, bmoreno - updated".index("tshah")
+print(tshah_index)
+```
+
+**Output:**
+
+```
+7
+```
+
+⚠️ If you search for just `"ts"`, it will return `0` instead of `7` because `"ts"` also appears in `"tsnow"`.
+
+---
+
+# Lists and the Security Analyst
+
+Lists are one of the most useful data structures in Python. As a **security analyst**, you will often use lists to store and process data such as **usernames, IP addresses, URLs, device IDs, and log entries**.
+
+---
+
+## 📌 List Data in a Security Setting
+
+* A **list** is a collection of data stored in sequential form.
+* Lists can contain **multiple data types** (strings, integers, etc.).
+* Example uses in cybersecurity:
+
+  * Store **usernames**
+  * Store **IP addresses**
+  * Store **URLs**
+  * Store **device IDs**
+
+---
+
+## Working with Indices in Lists
+
+Like strings, lists use **indices starting from 0**.
+
+Example list:
+
+```python
+username_list = ["elarson", "fgarcia", "tshah", "sgilmore"]
+```
+
+| Element    | Index |
+| ---------- | ----- |
+| "elarson"  | 0     |
+| "fgarcia"  | 1     |
+| "tshah"    | 2     |
+| "sgilmore" | 3     |
+
+---
+
+### Bracket Notation
+
+Extract an element using its index:
+
+```python
+username_list = ["elarson", "fgarcia", "tshah", "sgilmore"]
+print(username_list[2])
+```
+
+**Output:**
+
+```
+tshah
+```
+
+You can also extract directly:
+
+```python
+print(["elarson", "fgarcia", "tshah", "sgilmore"][2])
+```
+
+**Output:**
+
+```
+tshah
+```
+
+---
+
+### Extracting a Slice
+
+```python
+username_list = ["elarson", "fgarcia", "tshah", "sgilmore"]
+print(username_list[0:2])
+```
+
+**Output:**
+
+```
+['elarson', 'fgarcia']
+```
+
+⚠️ Note: Slice starts at index `0` and ends **before index 2**.
+
+---
+
+## Changing Elements in a List
+
+Unlike strings (immutable), **lists are mutable**. You can change elements using bracket notation.
+
+```python
+username_list = ["elarson", "fgarcia", "tshah", "sgilmore"]
+print("Before changing an element:", username_list)
+
+username_list[1] = "bmoreno"
+print("After changing an element:", username_list)
+```
+
+**Output:**
+
+```
+Before changing an element: ['elarson', 'fgarcia', 'tshah', 'sgilmore']
+After changing an element: ['elarson', 'bmoreno', 'tshah', 'sgilmore']
+```
+
+---
+
+## List Methods
+
+### `.insert()` → Insert at a Specific Position
+
+```python
+username_list = ["elarson", "bmoreno", "tshah", "sgilmore"]
+print("Before inserting an element:", username_list)
+
+username_list.insert(2, "wjaffrey")
+print("After inserting an element:", username_list)
+```
+
+**Output:**
+
+```
+Before inserting an element: ['elarson', 'bmoreno', 'tshah', 'sgilmore']
+After inserting an element: ['elarson', 'bmoreno', 'wjaffrey', 'tshah', 'sgilmore']
+```
+
+---
+
+### `.remove()` → Remove by Value
+
+```python
+username_list = ["elarson", "bmoreno", "wjaffrey", "tshah", "sgilmore"]
+print("Before removing an element:", username_list)
+
+username_list.remove("elarson")
+print("After removing an element:", username_list)
+```
+
+**Output:**
+
+```
+Before removing an element: ['elarson', 'bmoreno', 'wjaffrey', 'tshah', 'sgilmore']
+After removing an element: ['bmoreno', 'wjaffrey', 'tshah', 'sgilmore']
+```
+
+⚠️ Removes only the **first occurrence** of the element.
+
+---
+
+### `.append()` → Add at the End
+
+```python
+username_list = ["bmoreno", "wjaffrey", "tshah", "sgilmore"]
+print("Before appending an element:", username_list)
+
+username_list.append("btang")
+print("After appending an element:", username_list)
+```
+
+**Output:**
+
+```
+Before appending an element: ['bmoreno', 'wjaffrey', 'tshah', 'sgilmore']
+After appending an element: ['bmoreno', 'wjaffrey', 'tshah', 'sgilmore', 'btang']
+```
+
+#### Example: Appending in a Loop
+
+```python
+numbers_list = []
+print("Before appending a sequence of numbers:", numbers_list)
+
+for i in range(10):
+    numbers_list.append(i)
+
+print("After appending a sequence of numbers:", numbers_list)
+```
+
+**Output:**
+
+```
+Before appending a sequence of numbers: []
+After appending a sequence of numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+---
+
+### `.index()` → Find Index of First Occurrence
+
+```python
+username_list = ["bmoreno", "wjaffrey", "tshah", "sgilmore", "btang"]
+username_index = username_list.index("tshah")
+print(username_index)
+```
+
+**Output:**
+
+```
+2
+```
+
+⚠️ Only returns the **first match** if duplicates exist.
+
+---
+
+# REGULAR EXPRESSIONS
+
+## Basics of regular expressions
+
+A **regular expression (regex)** is a sequence of characters that forms a pattern. You can use these in Python to search for patterns like IP addresses, emails, or device IDs.
+
+To use regex in Python, import the `re` module:
+
+```python
+import re
+```
+
+Regular expressions are written as strings and used with `re` functions.
+
+The function `re.findall(pattern, string)` returns a list of matches.
+
+Example:
+
+```python
+import re
+print(re.findall("ts", "tsnow, tshah, bmoreno"))
+# Output: ['ts', 'ts']
+```
+
+---
+
+## Regular expression symbols
+
+### Symbols for character types
+
+* `\w` → matches any alphanumeric character (a-z, A-Z, 0-9, and `_`)
+* `.` → matches any character (including symbols)
+* `\d` → matches digits \[0-9]
+* `\s` → matches whitespace (spaces, tabs, newlines)
+* `\.` → matches a literal period `.`
+
+Example 1:
+
+```python
+print(re.findall("\w", "h32r.,b17"))
+# Output: ['h', '3', '2', 'r', 'b', '1', '7']
+```
+
+Example 2:
+
+```python
+print(re.findall("\d", "DeviceID h32rb17"))
+# Output: ['3', '2', '1', '7']
+```
+
+Extra Example 3:
+
+```python
+print(re.findall("\s", "Hello World 123"))
+# Output: [' ', ' ']
+```
+
+Extra Example 4:
+
+```python
+print(re.findall("\.", "my.email@company.com"))
+# Output: ['.', '.']
+```
+
+---
+
+### Symbols to quantify occurrences
+
+* `+` → one or more occurrences
+* `*` → zero, one, or more occurrences
+* `{n}` → exactly n repetitions
+* `{n,m}` → between n and m repetitions
+
+Example 1:
+
+```python
+print(re.findall("\d+", "h32rb17"))
+# Output: ['32', '17']
+```
+
+Example 2:
+
+```python
+print(re.findall("\d*", "h32rb17"))
+# Output: ['', '32', '', '', '17', '']
+```
+
+Example 3:
+
+```python
+print(re.findall("\d{2}", "h32rb17 k825t0m c2994eh"))
+# Output: ['32', '17', '82', '29', '94']
+```
+
+Extra Example 4:
+
+```python
+print(re.findall("\d{1,3}", "h32rb17 k825t0m c2994eh"))
+# Output: ['32', '17', '825', '0', '299', '4']
+```
+
+Extra Example 5:
+
+```python
+print(re.findall("a+", "caaandy aaaand aaah"))
+# Output: ['aaa', 'aaaa', 'aaa']
+```
+
+---
+
+## Constructing a pattern
+
+Suppose you have a string with employee IDs, usernames, login attempts, and departments:
+
+```python
+employee_logins_string = "1001 bmoreno: 12 Marketing 1002 tshah: 7 Human Resources 1003 sgilmore: 5 Finance"
+```
+
+You want only **username: logins**.
+Pattern breakdown:
+
+* `\w+` → username (letters/numbers/underscore)
+* `:` → literal colon
+* `\s` → space
+* `\d+` → one or more digits
+
+Code:
+
+```python
+pattern = "\w+:\s\d+"
+print(re.findall(pattern, employee_logins_string))
+# Output: ['bmoreno: 12', 'tshah: 7', 'sgilmore: 5']
+```
+
+Extra Example 1 (match emails):
+
+```python
+text = "Contact: alice@mail.com, bob123@company.org"
+print(re.findall("\w+@\w+\.\w+", text))
+# Output: ['alice@mail.com', 'bob123@company.org']
+```
+
+Extra Example 2 (match IP addresses):
+
+```python
+text = "Servers: 192.168.1.1, 10.0.0.25"
+print(re.findall("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", text))
+# Output: ['192.168.1.1', '10.0.0.25']
+```
+
+---
+
 
 ---
 
@@ -5768,6 +6319,59 @@ Threat intelligence: Evidence-based threat information that provides context abo
 Triage: The prioritizing of incidents according to their level of importance or urgency
 
 VirusTotal: A service that allows anyone to analyze suspicious files, domains, URLs, and IP addresses for malicious content
+Glossary terms from module 4
+Terms and definitions from Course 6, Module 4
+Anomaly-based analysis: A detection method that identifies abnormal behavior 
+
+Array: A data type that stores data in a comma-separated ordered list
+
+Common Event Format (CEF): A log format that uses key-value pairs to structure data and identify fields and their corresponding values
+
+Configuration file: A file used to configure the settings of an application
+
+Endpoint: Any device connected on a network
+
+Endpoint detection and response (EDR): An application that monitors an endpoint for malicious activity
+
+False positive: An alert that incorrectly detects the presence of a threat
+
+Host-based intrusion detection system (HIDS): An application that monitors the activity of the host on which it’s installed 
+
+Intrusion detection systems (IDS): An application that monitors system activity and alerts on possible intrusions
+
+Key-value pair: A set of data that represents two linked items: a key, and its corresponding value
+
+Log: A record of events that occur within an organization’s systems
+
+Log analysis: The process of examining logs to identify events of interest 
+
+Log management: The process of collecting, storing, analyzing, and disposing of log data
+
+Logging: The recording of events occurring on computer systems and networks
+
+Network-based intrusion detection system (NIDS): An application that collects and monitors network traffic and network data
+
+Object: A data type that stores data in a comma-separated list of key-value pairs
+
+Search Processing Language (SPL): Splunk’s query language
+
+Security information and event management (SIEM): An application that collects and analyzes log data to monitor critical activities in an organization 
+
+Signature: A pattern that is associated with malicious activity
+
+Signature analysis: A detection method used to find events interest
+
+Suricata: An open-source intrusion detection system, intrusion prevention system, and network analysis tool
+
+Telemetry: The collection and transmission of data for analysis
+
+Wildcard: A special character that can be substituted with any other character
+
+YARA-L: A computer language used to create rules for searching through ingested log data
+
+Zero-day: An exploit that was previously unknown
+
+
 
 
 
