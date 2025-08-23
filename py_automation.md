@@ -1,3 +1,82 @@
+# 📌 Importing Modules and Libraries in Python
+
+## 🔹 What are Modules and Libraries?
+- **Module** → A Python file containing functions, variables, classes, and runnable code.  
+- **Library** → A collection of modules that provide reusable code.
+
+---
+
+## 📚 Python Standard Library
+The **Python Standard Library** is a collection of pre-built modules that comes packaged with Python.  
+Some commonly used modules are:
+
+- `re` → Searching for patterns in text/log files  
+- `csv` → Working with `.csv` files  
+- `glob` & `os` → Interacting with the file system  
+- `time` & `datetime` → Working with timestamps  
+- `statistics` → Performing statistical calculations  
+
+---
+
+## 🔹 Importing Modules
+
+### ✅ Importing an Entire Module
+```python
+import statistics
+
+monthly_failed_attempts = [20, 17, 178, 33, 15, 21, 19, 29, 32, 15, 25, 19]
+
+mean_failed_attempts = statistics.mean(monthly_failed_attempts)
+print("mean:", mean_failed_attempts)
+
+median_failed_attempts = statistics.median(monthly_failed_attempts)
+print("median:", median_failed_attempts)
+
+#mean: 35.25
+#median: 20.5
+from statistics import mean, median
+
+monthly_failed_attempts = [20, 17, 178, 33, 15, 21, 19, 29, 32, 15, 25, 19]
+
+mean_failed_attempts = mean(monthly_failed_attempts)
+print("mean:", mean_failed_attempts)
+
+median_failed_attempts = median(monthly_failed_attempts)
+print("median:", median_failed_attempts)
+```
+mean: 35.25
+median: 20.5
+
+🔹 External Libraries
+
+In addition to the Standard Library, Python allows installation of external libraries such as:
+
+Beautiful Soup (bs4) → Parsing HTML files
+
+NumPy (numpy) → Arrays & mathematical computations
+
+✅ Installing External Libraries
+
+In Jupyter Notebook or Google Colab:
+
+%pip install numpy
+
+✅ Importing After Installation
+import numpy
+
+📝 Key Takeaways
+
+Use import module to bring in an entire module.
+
+Use from module import function1, function2 to bring in only what you need.
+
+Standard Library includes re, csv, os, glob, time, datetime, statistics, etc.
+
+External libraries must be installed first using pip install <library>.
+
+
+---
+
 # 🔐 Automating Security in CI/CD with Python (DevSecOps)
 
 ## 📌 Overview
