@@ -1154,7 +1154,15 @@ A cryptographic attack affects secure forms of communication between a sender an
 2. Collision
 3. Downgrade
 4. 
-Cryptographic attacks fall under the communication and network security domain. 
+Cryptographic attacks fall under the communication and network security domain.
+
+<img width="1294" height="745" alt="image" src="https://github.com/user-attachments/assets/0871659a-91d2-4587-8aed-9b6c73214725" />
+<img width="1199" height="671" alt="image" src="https://github.com/user-attachments/assets/b54bf53e-bdab-4fc8-9c5e-cacabbd68d52" />
+<img width="1196" height="484" alt="image" src="https://github.com/user-attachments/assets/420e62e1-1331-4a8c-aeac-f90fb18874d2" />
+<img width="1213" height="465" alt="image" src="https://github.com/user-attachments/assets/ae6264fe-640e-497d-bc9e-97ab265a30f4" />
+<img width="1198" height="523" alt="image" src="https://github.com/user-attachments/assets/674ed6f5-959c-4bba-8569-a3416d60effb" />
+<img width="1188" height="459" alt="image" src="https://github.com/user-attachments/assets/5306e37c-2325-474b-a674-13b8d66e24a8" />
+
 
 ## ✅ Key Takeaways
 
